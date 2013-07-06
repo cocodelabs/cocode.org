@@ -1,9 +1,25 @@
-{% block body %}
-    <header>Cocode</header>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/cocode.css" type="text/css" />
+        <!--[if lt IE 9]>  
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+        <![endif]-->
+        {% block extra_head %}{% endblock %}
+    </head>
 
-    {% block content %}
-    {% endblock %}
+    <body>
+        <header></header>
 
-    <footer></footer>
-{% endblock %}
+        {% block body %}
+            {% block content %}
+            {% endblock %}
+        {% endblock %}
+
+        {% include 'analytics.html' %}
+    </body>
+</html>
 

@@ -3,18 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/cocode.css" type="text/css" />
         {% block extra_head %}{% endblock %}
     </head>
 
-    <body>
+    <body style="background: #eee;">
         {% block body %}
+            <div style="background: white; padding: 5px 30px 30px; width: 250px; margin: 200px auto; text-align: center;">
             {% block content %}
             {% endblock %}
+            </div>
         {% endblock %}
-
-        {% include 'analytics.html' %}
     </body>
 </html>
-
