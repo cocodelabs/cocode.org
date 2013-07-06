@@ -1,0 +1,16 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+<section>
+  {% for article in articles_page.object_list %}
+  <article id="{{ article.slug }}">
+        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2>
+
+        {{ article.summary }}
+
+        <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">Read more →</a>
+    </article>
+  {% endfor %}
+</section>
+{% endblock %}
+

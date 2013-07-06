@@ -1,0 +1,36 @@
+{% extends "blog_base.html" %}
+
+{% block content %}
+<section>
+    <article>
+        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2>
+
+        {{ article.content }}
+
+        {% if article.tags %}
+          <div class="tags">
+            <span class="tag">tags</span>
+
+            {% for tag in article.tags %}
+            <a href="#" class="tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="card">
+            <img src="https://secure.gravatar.com/avatar/d200a17dd269fd4001bacb11662dab4b?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" />
+
+            <div class="author">
+                <a href="#"><strong>Kyle Fuller</strong></a>
+                <p>Director</p>
+            </div>
+
+            <div class="date">
+                <strong>Published</strong>
+                <p><time>June 28, 2013</time></p>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}
+

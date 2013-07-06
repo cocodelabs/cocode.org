@@ -1,0 +1,137 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #2C2C2E;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #1FB0E7;
+    text-decoration: none;
+    border-bottom: 1px solid #1FB0E7;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+    color: #2C2C2E;
+    border: 0;
+}
+
+p {
+    font-weight: 200;
+}
+
+header {
+    background: #201B17;
+    height: 100%;
+    height: 1000px;
+    float: left;
+    width: 370px;
+}
+
+section {
+    max-width: 900px;
+    padding: 47px;
+    margin-left: 370px;
+}
+
+article {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #E9E9E7;
+}
+
+.tags {
+    margin-top: 35px;
+}
+
+.tag {
+    background: #F2F2F2;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #E6E6E5;
+    color: #A4A4A4;
+    border-radius: 3px;
+    font-style: italic;
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.tag:hover {
+    background: #E4F8FF;
+    border: 1px solid #CBE9F2;
+    color: #8CC7DB;
+}
+
+.card {
+    position: relative;
+    border-top: 1px solid #E9E9E7;
+    padding: 45px 5px 0;
+    display: block;
+    margin-top: 50px;
+}
+
+.card img {
+    border-radius: 95px;
+    height: 70px;
+    width: 70px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+
+.card .author {
+    margin-left: 105px;
+    margin-right: 200px;
+    padding-right: 25px;
+}
+
+.card .date {
+    width: 177px;
+    padding-left: 25px;
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+
+.card a {
+    border: 0;
+    color: #2C2C2E;
+}
+
+.card p {
+    font-style: italic;
+    color: #b3b3b1;
+    margin: 0;
+}
+
+pre {
+    background: #eee;
+    border-radius: 5px;
+    overflow: scroll;
+    width: 600px;
+    padding: 10px;
+    color: #a4a4a4;
+}
+
+
+@media screen and (max-width: 1000px) {
+    header {
+        height: 330px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    section {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        height: 180px;
+        margin-bottom: 25px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
