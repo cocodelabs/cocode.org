@@ -3,8 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/cocode.css" type="text/css" />
+        <!--[if lt IE 9]>  
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
+        <![endif]-->
         {% block extra_head %}{% endblock %}
     </head>
 
@@ -13,8 +16,6 @@
             {% block content %}
             {% endblock %}
         {% endblock %}
-
-        {% include 'analytics.html' %}
     </body>
 </html>
 

@@ -3,12 +3,28 @@
 {% block content %}
 <section>
   {% for article in articles_page.object_list %}
-  <article id="{{ article.slug }}">
+  <div class="timeline-bullet icon-{{ article.category }}"></div>
+  <article>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2>
+
+        <ul>
+            <li>{{ article.date|strftime('%d %B %Y') }}</li>
+            <li>{{ article.tags|count }} Tags</li>
+            <li>{{ article.disqus_comment_count }} Comments</li>
+            <li>0 Shares</li>
+        </ul>
 
         {{ article.summary }}
 
-        <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">Read more →</a>
+        <a href="{{ SITEURL }}/{{ article.url }}">Read more &#8594;</a>
+
+        {% if article.tags %}
+          <div class="tags">
+            {% for tag in article.tags %}
+            <a href="#" class="tag">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
     </article>
   {% endfor %}
 </section>

@@ -5,12 +5,17 @@
     <article>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2>
 
+        <ul>
+            <li>{{ article.date|strftime('%d %B %Y') }}</li>
+            <li>{{ article.tags|count }} Tags</li>
+            <li>{{ article.disqus_comment_count }} Comments</li>
+            <li>0 Shares</li>
+        </ul>
+
         {{ article.content }}
 
         {% if article.tags %}
           <div class="tags">
-            <span class="tag">tags</span>
-
             {% for tag in article.tags %}
             <a href="#" class="tag">{{ tag }}</a>
             {% endfor %}
