@@ -1,6 +1,8 @@
 {% extends "blog_base.html" %}
 
 {% block content %}
+<header><h1><a href="/blog">Cocode</a></h1></header>
+
 <section>
   {% for article in articles_page.object_list %}
   <div class="timeline-bullet icon-{{ article.category }}"></div>
@@ -16,7 +18,7 @@
 
         {{ article.summary }}
 
-        <a href="{{ SITEURL }}/{{ article.url }}">Read more &#8594;</a>
+        <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
 
         {% if article.tags %}
           <div class="tags">

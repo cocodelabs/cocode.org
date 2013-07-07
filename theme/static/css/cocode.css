@@ -24,6 +24,7 @@ a {
     color: #ed7859;
     text-decoration: none;
     border-bottom: 1px solid #f6d2cb;
+
     transition:.2s;
     -webkit-transition: 0.2s;
 
@@ -44,7 +45,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover { color: #ed7859; bor
 
 h2 {
     font-size: 30px;
-    margin: 38px 0 15px 0;
+    margin: 32px 0 5px 0;
+    line-height:1.3em;
 }
 
 h1 {
@@ -63,15 +65,11 @@ h1 a {
 
 header {
     position: fixed;
-    background: url(/theme/img/bg-bottom2.jpg) bottom no-repeat,url(/theme/img/bg-repeat.jpg) 0px -167px;
+    background: url(/theme/img/bg-bottom.jpg) bottom no-repeat,url(/theme/img/bg-repeat.jpg) 0px -167px;
     background-size: 100% auto;
     height:100%;
     float: left;
     width: 370px;
-}
-
-header:after {
-
 }
 
 section {
@@ -80,9 +78,10 @@ section {
     margin-left: 315px;
     margin-top: 100px;
     padding-left: 100px;
-    border-left: 4px solid rgba(255,255,255,0.5);
+    border-left: 4px solid rgba(255,255,255,0.45);
     position: absolute;
     z-index: 2;
+    min-height: 100%;
 }
 
 article {
@@ -199,7 +198,7 @@ pre {
     color: #a4a4a4;
 }
 
-/* Disable selection of certain elements */
+/* Disable selection of all elements except the ones that are interesting */
 * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -209,7 +208,7 @@ pre {
     user-select: none; 
 }
 
-p, h2 a {
+p, h2 a, p *, pre, pre *, strong {
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
@@ -218,51 +217,122 @@ p, h2 a {
     user-select: text; 
 }
 
+::selection { background: #ed7859; color: #ffffff; }
+::-moz-selection { background: #ed7859; color: #ffffff; }
+
 .timeline-bullet {
     background: url(/theme/img/timeline-bullet.png);
     background-size: 60px 68px;
     width: 60px;
-    height: 68px;
+    height: 43px;
     position: absolute;
     margin: 32px 0 0 -132px;
-    opacity: 0.5;
+    opacity: 1;
+    text-align: center;
+    padding-top: 25px;
 }
 
 .timeline-bullet:first-child {
     background-position: 0 -5px;
-    height: 64px;
-    margin: 0 0 0 -131px;
+    height: 43px;
+    margin: 0 0 0 -132px;
+    padding-top: 20px;
 }
 
+div[class^='icon']:after, div[class*='icon']:after {
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-general.png);
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-apps:after { background: url(/theme/img/icon-apps.png); }
+.icon-date:after { background: url(/theme/img/icon-date.png); }
+.icon-event:after { background: url(/theme/img/icon-event.png); }
+.icon-labs:after { background: url(/theme/img/icon-labs.png); }
+.icon-love:after { background: url(/theme/img/icon-love.png); }
+.icon-picture:after { background: url(/theme/img/icon-picture.png); }
+.icon-user:after { background: url(/theme/img/icon-user.png); }
+
+/*temporary, for testing */
+.icon-misc:after { background: url(/theme/img/icon-apps.png); }
+.icon-cocode:after { background: url(/theme/img/icon-labs.png); }
+
+/* smaller (tablet) version */
 @media screen and (max-width: 1000px) {
     header {
-        height: 330px;
+        height: 280px;
         width: 100%;
         margin-bottom: 50px;
         position: relative;
     }
 
     section {
-        margin: 370px auto;
+        margin: 320px auto;
         padding:  0 40px;
+        max-width: none;
     }
 
     .timeline-bullet {display: none;}
     section { border-left: none; }
 }
 
+/* mobile version */
 @media screen and (max-width: 500px) {
     header {
-        height: 180px;
+        height: 150px;
         margin-bottom: 25px;
         position: relative;
     }
 
+    header h1 {
+        width: 85px;
+        margin: 30px auto;
+    }
+
+    header h1 a {
+        width: 75px;
+    }
+
     section {
         padding: 20px;
-        margin-top: 190px;
+        margin-top: 165px;
+        max-width: none;
     }
 
     .timeline-bullet {display: none;}
     section { border-left: none; }
+}
+
+/* different sidebar for article on large version */
+@media screen and (min-width: 1000px) {
+    header.small {
+        margin-left: -250px;
+    }
+
+    header.small h1 {
+        width: 85px;
+        margin-left: 270px;
+    }
+
+    header.small h1 a {
+        width: 75px;
+    }
+
+    header.small h1:after {
+        content: "← go back";
+        color: #b2aaaa;
+        font-size: 14px;
+        margin-left: -3px;
+    }
+
+    section.large {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 180px;
+        margin-top: 50px;
+        max-width: 750px;
+    }
 }
