@@ -15,7 +15,7 @@ body {
     font-style:normal;
     color:#57565e;
     font-size:16px;
-    line-height:1.57142em;
+    line-height:1.6em;
     padding: 0;
     margin: 0;
 }
@@ -25,7 +25,11 @@ a {
     text-decoration: none;
     border-bottom: 1px solid #f6d2cb;
     transition:.2s;
+    -webkit-transition: 0.2s;
+
     transition-property: color, background, border-bottom;
+    -webkit-transition-property: color, background, border-bottom;
+
     transition-timing-function: ease-in-out;
     -webkit-transition-timing-function: ease-in-out;
 }
@@ -43,9 +47,23 @@ h2 {
     margin: 38px 0 15px 0;
 }
 
+h1 {
+    background: url(/theme/img/logo_full.png) no-repeat;
+    background-size: 230px 75px;
+    width: 230px;
+    height: 75px;
+    margin-left: 20px;
+}
+h1 a {
+    display: block;
+    text-indent: -999px;
+    width: 230px;
+    height: 75px;
+}
+
 header {
     position: fixed;
-    background: url(/theme/img/bg-bottom.jpg) bottom no-repeat,url(/theme/img/bg-repeat.jpg) 0px -167px;
+    background: url(/theme/img/bg-bottom2.jpg) bottom no-repeat,url(/theme/img/bg-repeat.jpg) 0px -167px;
     background-size: 100% auto;
     height:100%;
     float: left;
@@ -62,7 +80,7 @@ section {
     margin-left: 315px;
     margin-top: 100px;
     padding-left: 100px;
-    border-left: 5px solid white;
+    border-left: 4px solid rgba(255,255,255,0.5);
     position: absolute;
     z-index: 2;
 }
@@ -70,6 +88,10 @@ section {
 article {
     padding-bottom: 50px;
     border-bottom: 1px solid #E9E9E7;
+}
+
+article:first-of-type {
+    margin-top: -35px;
 }
 
 article:last-child {
@@ -122,6 +144,7 @@ article > ul li + li::before {
 .tag:hover {
     background: #ed7859;
     color: #fff;
+    border: none;
 }
 
 .card {
@@ -197,16 +220,18 @@ p, h2 a {
 
 .timeline-bullet {
     background: url(/theme/img/timeline-bullet.png);
-    background-size: 59px 68px;
-    width: 59px;
+    background-size: 60px 68px;
+    width: 60px;
     height: 68px;
     position: absolute;
-    margin: 0 0 0 -132px;
+    margin: 32px 0 0 -132px;
+    opacity: 0.5;
 }
 
 .timeline-bullet:first-child {
     background-position: 0 -5px;
     height: 64px;
+    margin: 0 0 0 -131px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -214,20 +239,30 @@ p, h2 a {
         height: 330px;
         width: 100%;
         margin-bottom: 50px;
+        position: relative;
     }
 
     section {
-        margin: 0 auto;
+        margin: 370px auto;
+        padding:  0 40px;
     }
+
+    .timeline-bullet {display: none;}
+    section { border-left: none; }
 }
 
 @media screen and (max-width: 500px) {
     header {
         height: 180px;
         margin-bottom: 25px;
+        position: relative;
     }
 
     section {
         padding: 20px;
+        margin-top: 190px;
     }
+
+    .timeline-bullet {display: none;}
+    section { border-left: none; }
 }
