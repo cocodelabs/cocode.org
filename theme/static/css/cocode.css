@@ -50,7 +50,7 @@ h2 {
 }
 
 h1 {
-    background: url(/theme/img/logo_full.png) no-repeat;
+    background: url(../images/logo_full.png) no-repeat;
     background-size: 230px 75px;
     width: 230px;
     height: 75px;
@@ -65,8 +65,8 @@ h1 a {
 
 header {
     position: fixed;
-    background: url(/theme/img/bg-bottom.jpg) bottom no-repeat,
-                url(/theme/img/bg-repeat.jpg) 0px -167px;
+    background: url(../images/bg-bottom.jpg) bottom no-repeat,
+                url(../images/bg-repeat.jpg) 0px -167px;
     background-size: 100% auto;
     height:100%;
     float: left;
@@ -223,7 +223,7 @@ p, h2 a, p *, pre, pre *, strong {
 ::-moz-selection { background: #ed7859; color: #ffffff; }
 
 .timeline-bullet {
-    background: url(/theme/img/timeline-bullet.png);
+    background: url(../images/timeline-bullet.png);
     background-size: 60px 68px;
     width: 60px;
     height: 63px;
@@ -244,7 +244,7 @@ p, h2 a, p *, pre, pre *, strong {
 div[class*='icon']:after {
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-general.png) no-repeat;
+    background: url(../images/icon-general.png) no-repeat;
     background-size: 24px 24px;
     width: 24px;
     height: 63px;
@@ -254,7 +254,7 @@ div[class*='icon']:after {
 .icon-apps:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-apps.png) no-repeat !important;
+    background: url(../images/icon-apps.png) no-repeat !important;
     background-position: center center !important; 
     background-size: 24px 26px !important;
     width: 26px !important;
@@ -264,7 +264,7 @@ div[class*='icon']:after {
 .icon-date:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-date.png) no-repeat !important;
+    background: url(../images/icon-date.png) no-repeat !important;
     background-position: center center !important; 
     background-size: 24px 24px !important;
     width: 24px !important;
@@ -274,7 +274,7 @@ div[class*='icon']:after {
 .icon-event:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-event.png) no-repeat !important;
+    background: url(../images/icon-event.png) no-repeat !important;
     background-position: center center !important; 
     background-size: 17px 24px !important;
     width: 17px !important;
@@ -284,7 +284,7 @@ div[class*='icon']:after {
 .icon-labs:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-labs.png) no-repeat !important; 
+    background: url(../images/icon-labs.png) no-repeat !important; 
     background-position: center center !important; 
     background-size: 21px 35px !important;
     width: 21px !important;
@@ -294,7 +294,7 @@ div[class*='icon']:after {
 .icon-love:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-love.png) no-repeat !important; 
+    background: url(../images/icon-love.png) no-repeat !important; 
     background-position: center center !important; 
     background-size: 24px 21px !important;
     width: 24px !important;
@@ -304,7 +304,7 @@ div[class*='icon']:after {
 .icon-picture:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-picture.png) no-repeat !important; 
+    background: url(../images/icon-picture.png) no-repeat !important; 
     background-position: center center !important; 
     background-size: 24px 21px !important;
     width: 24px !important;
@@ -314,7 +314,7 @@ div[class*='icon']:after {
 .icon-user:after { 
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-user.png) no-repeat !important;
+    background: url(../images/icon-user.png) no-repeat !important;
     background-position: center center !important; 
     background-size: 24px 26px !important;
     width: 26px !important;
@@ -370,39 +370,23 @@ div[class*='icon']:after {
 /* different sidebar for article on large version */
 @media screen and (min-width: 1000px) {
     @-webkit-keyframes slideIn { 
-        from { 
-            margin-left:0px; 
-        } 
-        to { 
-            margin-left:-250px; 
-        }
+        from { margin-left:0px; } 
+        to { margin-left:-250px; }
     }
 
     @-webkit-keyframes slideOut { 
-        from { 
-            margin-left:-250px; 
-        } 
-        to { 
-            margin-left:0px; 
-        }
+        from { margin-left:-250px; } 
+        to { margin-left:0px; }
     }
 
     @-webkit-keyframes fadeIn { 
-        from { 
-            opacity: 0;
-        } 
-        to { 
-            opacity: 1;
-        }
+        from { opacity: 0; } 
+        to { opacity: 1; }
     }
 
     @-webkit-keyframes fadeOut { 
-        from { 
-            opacity: 1;
-        } 
-        to { 
-            opacity: 0;
-        }
+        from { opacity: 1; } 
+        to { opacity: 0; }
     }
 
     header.small {

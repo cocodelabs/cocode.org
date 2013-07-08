@@ -1,7 +1,7 @@
 {% extends "blog_base.html" %}
 
 {% block content %}
-<header class="small"><h1><a href="/blog">Cocode</a></h1></header>
+<header class="small"><h1><a href="{{ SITEURL }}/blog">Cocode</a></h1></header>
 
 <section class="large">
     <article>
@@ -60,15 +60,24 @@ return true;
 function animateBack(){
     document.getElementsByClassName('small')[0].classList.add("animback");
     document.getElementsByClassName('large')[0].classList.add("animback");
-    setTimeout(function(){window.location = "{{ SITEURL }}/blog";},650);
+    setTimeout(function(){window.location = "{{ SITEURL }}/blog";},620);
+    /*$(".small").on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', 
+    function() {
+        setTimeout(function(){window.location = "{{ SITEURL }}/blog";},130);
+    });*/
 }
-    
-</script>
 
-<script>
-//alert(document.referrer.indexOf("{{SITEURL}}") );
+function checkRefresh() {
+    if (document.location.hash === '#post') {
+        console.log('Refreshed');
+        return true;
+    } else {
+        document.location.hash = 'post';
+        return false;
+    }
+}
 
-if (document.referrer.indexOf("{{SITEURL}}") != 0){
+if (document.referrer.indexOf("{{SITEURL}}") != 0 || checkRefresh()){
 document.getElementsByClassName('small')[0].classList.add("noanim");
 document.getElementsByClassName('large')[0].classList.add("noanim");
 }
