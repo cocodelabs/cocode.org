@@ -224,41 +224,100 @@ p, h2 a, p *, pre, pre *, strong {
     background: url(/theme/img/timeline-bullet.png);
     background-size: 60px 68px;
     width: 60px;
-    height: 43px;
+    height: 63px;
     position: absolute;
     margin: 32px 0 0 -132px;
     opacity: 1;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 5px;
 }
 
 .timeline-bullet:first-child {
     background-position: 0 -5px;
-    height: 43px;
+    height: 63px;
     margin: 0 0 0 -132px;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
-div[class^='icon']:after, div[class*='icon']:after {
+div[class*='icon']:after {
     content: "";
     display: inline-block;
-    background: url(/theme/img/icon-general.png);
+    background: url(/theme/img/icon-general.png) no-repeat;
     background-size: 24px 24px;
     width: 24px;
-    height: 24px;
+    height: 63px;
+    background-position: center center;
 }
 
-.icon-apps:after { background: url(/theme/img/icon-apps.png); }
-.icon-date:after { background: url(/theme/img/icon-date.png); }
-.icon-event:after { background: url(/theme/img/icon-event.png); }
-.icon-labs:after { background: url(/theme/img/icon-labs.png); }
-.icon-love:after { background: url(/theme/img/icon-love.png); }
-.icon-picture:after { background: url(/theme/img/icon-picture.png); }
-.icon-user:after { background: url(/theme/img/icon-user.png); }
+.icon-apps:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-apps.png) no-repeat !important;
+    background-position: center center !important; 
+    background-size: 24px 26px !important;
+    width: 26px !important;
+    height: 57px !important;
+}
 
-/*temporary, for testing */
-.icon-misc:after { background: url(/theme/img/icon-apps.png); }
-.icon-cocode:after { background: url(/theme/img/icon-labs.png); }
+.icon-date:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-date.png) no-repeat !important;
+    background-position: center center !important; 
+    background-size: 24px 24px !important;
+    width: 24px !important;
+    height: 57px !important;
+}
+
+.icon-event:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-event.png) no-repeat !important;
+    background-position: center center !important; 
+    background-size: 17px 24px !important;
+    width: 17px !important;
+    height: 57px !important;
+}
+
+.icon-labs:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-labs.png) no-repeat !important; 
+    background-position: center center !important; 
+    background-size: 21px 35px !important;
+    width: 21px !important;
+    height: 57px !important;
+}
+
+.icon-love:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-love.png) no-repeat !important; 
+    background-position: center center !important; 
+    background-size: 24px 21px !important;
+    width: 24px !important;
+    height: 62px !important;
+}
+
+.icon-picture:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-picture.png) no-repeat !important; 
+    background-position: center center !important; 
+    background-size: 24px 21px !important;
+    width: 24px !important;
+    height: 57px !important;
+}
+
+.icon-user:after { 
+    content: "";
+    display: inline-block;
+    background: url(/theme/img/icon-user.png) no-repeat !important;
+    background-position: center center !important; 
+    background-size: 24px 26px !important;
+    width: 26px !important;
+    height: 24px !important;
+}
 
 /* smaller (tablet) version */
 @media screen and (max-width: 1000px) {
