@@ -228,13 +228,15 @@ pre {
 
 .summary:before {
    content:'...';
-    text-align:center;
-    position:relative;
+    text-align:right;
+    position:absolute;
     display:block;
-    width:50px;
-    float: right;
-    top: 3em;
-    right: 0px;
+    width:40px;
+    height: 32px;
+    right: 0;
+    margin-right: 35px;
+    padding-right: 30px;
+    margin-top: 48px;
     background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 99%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(38%,rgba(255,255,255,1)), color-stop(99%,rgba(255,255,255,1)));
     background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 38%,rgba(255,255,255,1) 99%);
@@ -409,6 +411,10 @@ div[class*='icon']:after {
         padding: 20px;
         margin-top: 165px;
         max-width: none;
+    }
+
+    .summary:before {
+        margin-right: 10px;
     }
 
     article:before {
