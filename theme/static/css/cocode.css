@@ -378,6 +378,15 @@ div[class*='icon']:after {
         }
     }
 
+    @-webkit-keyframes slideOut { 
+        from { 
+            margin-left:-250px; 
+        } 
+        to { 
+            margin-left:0px; 
+        }
+    }
+
     @-webkit-keyframes fadeIn { 
         from { 
             opacity: 0;
@@ -387,11 +396,22 @@ div[class*='icon']:after {
         }
     }
 
+    @-webkit-keyframes fadeOut { 
+        from { 
+            opacity: 1;
+        } 
+        to { 
+            opacity: 0;
+        }
+    }
+
     header.small {
         margin-left: -250px;
 
-        -webkit-animation:slideIn ease-in-out 1;
-        -webkit-animation-duration:0.5s;
+        animation:slideIn cubic-bezier(0.680, 0.005, 0.165, 0.995) 1;
+        -webkit-animation:slideIn cubic-bezier(0.680, 0.005, 0.165, 0.995) 1;
+        animation-duration:0.45s;
+        -webkit-animation-duration:0.45s;
     }
 
     header.small h1 {
@@ -416,8 +436,10 @@ div[class*='icon']:after {
         margin: -40px 0 0 -3px;
         position: relative;
         z-index: 2;
+        animation:fadeIn ease-in-out 1;
         -webkit-animation:fadeIn ease-in-out 1;
-        -webkit-animation-duration:0.5s;
+        animation-duration:0.3s;
+        -webkit-animation-duration:0.3s;
     }
 
     section.large {
@@ -428,10 +450,37 @@ div[class*='icon']:after {
         margin-top: 50px;
         max-width: 750px;
         -webkit-animation:fadeIn ease-in-out 1;
-        -webkit-animation-duration:0.7s;
-        -webkit-animation-delay: 0.3s;
-        -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+        -webkit-animation-duration:0.5s;
+        -webkit-animation-delay: 0.2s;
+        -webkit-animation-fill-mode:forwards;
+        -moz-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
     }
 }
+
+.noanim, .noanim h1:after {
+    animation-duration:0s !important;
+    -webkit-animation-duration:0s !important;
+    animation-delay: 0s !important;
+    -webkit-animation-delay: 0s !important;
+}
+
+header.animback {
+    animation:slideOut cubic-bezier(0.680, 0.005, 0.165, 0.995) 1;
+    -webkit-animation:slideOut cubic-bezier(0.680, 0.005, 0.165, 0.995) 1;
+    animation-duration:0.45s;
+    -webkit-animation-duration:0.45s;
+        -webkit-animation-delay: 0.2s!important;
+    animation-delay: 0.2s!important;
+    -webkit-animation-delay: 0.2s!important;
+}
+
+section.animback, .animback h1:after {
+    -webkit-animation:fadeOut ease-in-out 1!important;
+    -webkit-animation-duration:0.5s!important;
+    -webkit-animation-fill-mode:forwards!important;
+    -moz-animation-fill-mode:forwards!important;
+    animation-fill-mode:forwards!important;
+}
+
+
