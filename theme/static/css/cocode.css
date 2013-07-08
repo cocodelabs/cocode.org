@@ -67,7 +67,7 @@ h1 a {
 header {
     position: fixed;
     background: url(../images/bg-bottom.jpg) bottom no-repeat,
-                url(../images/bg-repeat.jpg) 0px -167px;
+                url(../images/bg-repeat.jpg);
     background-size: 100% auto;
     height:100%;
     float: left;
