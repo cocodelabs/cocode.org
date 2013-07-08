@@ -1,12 +1,14 @@
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    -webkit-text-size-adjust:100%;
-    -ms-text-size-adjust:100%;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 body {
@@ -16,8 +18,6 @@ body {
     color:#57565e;
     font-size:16px;
     line-height:1.6em;
-    padding: 0;
-    margin: 0;
 }
 
 a {
@@ -65,11 +65,13 @@ h1 a {
 
 header {
     position: fixed;
-    background: url(/theme/img/bg-bottom.jpg) bottom no-repeat,url(/theme/img/bg-repeat.jpg) 0px -167px;
+    background: url(/theme/img/bg-bottom.jpg) bottom no-repeat,
+                url(/theme/img/bg-repeat.jpg) 0px -167px;
     background-size: 100% auto;
     height:100%;
     float: left;
     width: 370px;
+    top: 0;
 }
 
 section {
@@ -367,31 +369,69 @@ div[class*='icon']:after {
 
 /* different sidebar for article on large version */
 @media screen and (min-width: 1000px) {
+    @-webkit-keyframes slideIn { 
+        from { 
+            margin-left:0px; 
+        } 
+        to { 
+            margin-left:-250px; 
+        }
+    }
+
+    @-webkit-keyframes fadeIn { 
+        from { 
+            opacity: 0;
+        } 
+        to { 
+            opacity: 1;
+        }
+    }
+
     header.small {
         margin-left: -250px;
+
+        -webkit-animation:slideIn ease-in-out 1;
+        -webkit-animation-duration:0.5s;
     }
 
     header.small h1 {
         width: 85px;
-        margin-left: 270px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
     }
 
     header.small h1 a {
         width: 75px;
+        height: 120px;
+        position: relative;
+        z-index: 3;
     }
 
     header.small h1:after {
         content: "← go back";
         color: #b2aaaa;
         font-size: 14px;
-        margin-left: -3px;
+        display: block;
+        margin: -40px 0 0 -3px;
+        position: relative;
+        z-index: 2;
+        -webkit-animation:fadeIn ease-in-out 1;
+        -webkit-animation-duration:0.5s;
     }
 
     section.large {
+        opacity: 0;
         border-left: none;
         padding-left: 0;
         margin-left: 180px;
         margin-top: 50px;
         max-width: 750px;
+        -webkit-animation:fadeIn ease-in-out 1;
+        -webkit-animation-duration:0.7s;
+        -webkit-animation-delay: 0.3s;
+        -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
     }
 }
