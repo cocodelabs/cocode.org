@@ -39,48 +39,5 @@
         </div>
     </article>
 </section>
-
-<script type="text/javascript">
-/* Screw jQuery, we can do this the old fashioned way */
-    
-window.onclick = hrefEvent;
-
-function hrefEvent(e){
-    e = e || window.event;
-    var t = e.target || e.srcElement
-    if ( t.href == "{{ SITEURL }}/blog"){
-        animateBack();
-        return false;
-    } else if ( t.href == "{{ SITEURL }}/{{ article.url }}") {
-        return false;
-    }
-return true; 
-}
-
-function animateBack(){
-    document.getElementsByClassName('small')[0].classList.add("animback");
-    document.getElementsByClassName('large')[0].classList.add("animback");
-    setTimeout(function(){window.location = "{{ SITEURL }}/blog";},620);
-    /*$(".small").on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', 
-    function() {
-        setTimeout(function(){window.location = "{{ SITEURL }}/blog";},130);
-    });*/
-}
-
-function checkRefresh() {
-    if (document.location.hash === '#post') {
-        console.log('Refreshed');
-        return true;
-    } else {
-        document.location.hash = 'post';
-        return false;
-    }
-}
-
-if (document.referrer.indexOf("{{SITEURL}}") != 0 || checkRefresh()){
-document.getElementsByClassName('small')[0].classList.add("noanim");
-document.getElementsByClassName('large')[0].classList.add("noanim");
-}
-</script>
 {% endblock %}
 

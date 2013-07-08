@@ -16,7 +16,9 @@
             <li>0 Shares</li>
         </ul>
 
-        {{ article.summary }}
+        <p class="summary">
+          {{ article.summary|striptags }}
+        </p>
 
         <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
 

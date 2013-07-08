@@ -40,3 +40,5 @@ ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
 FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
 
+SUMMARY_MAX_LENGTH = 100
+
