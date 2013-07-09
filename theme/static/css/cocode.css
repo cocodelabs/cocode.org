@@ -45,7 +45,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover { color: #ed7859; bor
 
 h2 {
     font-size: 30px;
-    margin: 32px 0 5px 0;
+    margin: 15px 0 0 0;
     line-height:1.3em;
 }
 
@@ -88,28 +88,21 @@ section {
 article:before {
     content: "";
     display: block;
-    position: absolute;
     width: 4px;
-    height: 278px;
     background: rgba(255,255,255,0.4);
-    margin: 66px 0 0 -104px;
+    display: table-cell;
+    position: relative;
+    top: 81px;
+    left: -104px;
 }
 
-/* Opera only */
-doesnotexist:-o-prefocus, article:before {  
-    content: "";
-    display: block;
-    position: absolute;
-    width: 4px;
-    height: 278px;
-    background: rgba(255,255,255,0.4);
-    margin: 98px 0 0 -104px !important;
-}   
-
 article {
+    display: table;
     padding-bottom: 50px;
+    padding-top: 17px;
     border-bottom: 1px solid #E9E9E7;
-    height: 263px;
+    overflow: visible !important;
+    overflow-y: hidden !important;
 }
 
 article:first-of-type {
@@ -122,7 +115,7 @@ article:last-child {
 
 article > ul {
     list-style: none;
-    margin: 0 0 9px 0;
+    margin: 0px 0 9px 0;
     padding: 0;
 }
 
@@ -145,6 +138,9 @@ article > ul li + li::before {
     float: left;
 }
 
+article img {
+    max-width: 100% !important;
+}
 .tags {
     margin-top: 35px;
 }
@@ -188,13 +184,11 @@ article > ul li + li::before {
 
 .card .author {
     margin-left: 105px;
-    margin-right: 200px;
-    padding-right: 25px;
+    width: auto !important;
 }
 
 .card .date {
     width: 177px;
-    padding-left: 25px;
     position: absolute;
     right: 0;
     top: 45px;
@@ -211,39 +205,27 @@ article > ul li + li::before {
     margin: 0;
 }
 
+article img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto\9!important; /* ie8 */
+}
+
 pre {
     background: #eee;
     border-radius: 5px;
-    overflow: scroll;
-    width: 600px;
+    width: auto !important;
     padding: 10px;
     color: #a4a4a4;
+    max-width: 100% !important;
+    min-width: 0px !important;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
-.summary {
-    height: 5em; 
-    overflow: hidden; 
-}
-
-.summary:before {
-   content:'...';
-    text-align:right;
-    position:absolute;
-    display:block;
-    width:40px;
-    height: 32px;
-    right: 0;
-    margin-right: 35px;
-    padding-right: 30px;
-    margin-top: 48px;
-    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 99%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(38%,rgba(255,255,255,1)), color-stop(99%,rgba(255,255,255,1)));
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 38%,rgba(255,255,255,1) 99%);
-    background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 38%,rgba(255,255,255,1) 99%);
-    background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 38%,rgba(255,255,255,1) 99%);
-    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 38%,rgba(255,255,255,1) 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e0e0e0', endColorstr='#e0e0e0',GradientType=1 );
-}
 
 /* Disable selection of all elements except the ones that are interesting */
 * {
@@ -255,13 +237,22 @@ pre {
     user-select: none; 
 }
 
-p, h2 a, p *, pre, pre *, strong {
+article *  {
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text; 
+}
+
+article > a, .tags, .tags * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 ::selection { background: #ed7859; color: #ffffff; }
@@ -420,8 +411,16 @@ div[class*='icon']:after {
         display: none;
     }
 
+    article > ul > li:last-child {
+        display: none;
+    }
+
     .timeline-bullet {display: none;}
     section { border-left: none; }
+
+    .card .date {
+        display: none;
+    }
 }
 
 /* different sidebar for article on large version */

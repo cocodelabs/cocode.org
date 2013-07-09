@@ -16,9 +16,7 @@
             <li>0 Shares</li>
         </ul>
 
-        <p class="summary">
-          {{ article.summary|striptags }}
-        </p>
+        {{ article.summary }}
 
         <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
 
@@ -32,17 +30,5 @@
     </article>
   {% endfor %}
 </section>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript">
-function fixBg(){
-    var bgheight = ($('header').width() / 930) * 476;
-    var offset = $(window).height() - bgheight - (($('header').width() / 370)*435);
-    $('header').css('background-position', 'bottom , 0 '+offset+'px');
-}
-
-fixBg();
-$(window).resize(function() { fixBg() });
-</script>
 {% endblock %}
 
