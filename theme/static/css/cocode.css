@@ -8,7 +8,6 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    font-smooth: always;
     text-rendering: optimizeLegibility;
 }
 
@@ -172,7 +171,7 @@ article > ul li + li::before {
 .card {
     position: relative;
     border-top: 1px solid #E9E9E7;
-    padding: 45px 5px 0;
+    padding: 45px 5px 70px;
     display: block;
     margin-top: 50px;
 }
