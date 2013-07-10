@@ -85,19 +85,16 @@ section {
     min-height: 100%;
 }
 
-article:before {
-    content: "";
+.timeline {
     display: block;
     width: 4px;
     background: rgba(255,255,255,0.4);
-    display: table-cell;
-    position: relative;
-    top: 81px;
-    left: -104px;
+    height: 100px;
+    position: absolute;
+    margin: 81px 0 0 -104px;
 }
 
 article {
-    display: table;
     padding-bottom: 50px;
     padding-top: 17px;
     border-bottom: 1px solid #E9E9E7;

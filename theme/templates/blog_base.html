@@ -4,6 +4,6 @@
     {% block content %}
     {% endblock %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript">function f(){var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px")}$(window).resize(function(){f()});f();</script>
+<script type="text/javascript">function f(){var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px");$(".timeline").each(function(){$(this).height($(this).parent().height())})}$(window).resize(function(){f()});f();</script>
 {% endblock %}
 
