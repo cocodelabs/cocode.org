@@ -8,7 +8,7 @@
   <div class="timeline-bullet icon-{{ article.category }}"></div>
   <article>
         <div class="timeline"></div>
-        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title}}">{{ article.title }}</a></h2>
+        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
         <ul>
             <li>{{ article.date|strftime('%d %B %Y') }}</li>
