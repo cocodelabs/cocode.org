@@ -17,11 +17,11 @@
         {{ article.content }}
 
         {% if article.tags %}
-          <div class="tags">
+          <ul class="tags">
             {% for tag in article.tags %}
-            <a href="#" class="tag">{{ tag }}</a>
+              <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
             {% endfor %}
-        </div>
+          </ul>
         {% endif %}
 
         <div class="card">

@@ -142,7 +142,11 @@ article img {
     margin-top: 35px;
 }
 
-.tag {
+.tags li:before {
+    display: none;
+}
+
+.tags li a {
     background: #f2f2f2;
     padding: 3px 5px 3px 5px;
     color: #A4A4A4;
@@ -155,7 +159,7 @@ article img {
     padding: 4px 10px;
 }
 
-.tag:hover {
+.tags li a:hover {
     background: #ed7859;
     color: #fff;
     border: none;
