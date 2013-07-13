@@ -10,7 +10,7 @@
         <div class="timeline"></div>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
-        <ul>
+        <ul class="meta">
             <li>{{ article.date|strftime('%d %B %Y') }}</li>
             <li>{{ article.tags|count }} Tags</li>
             <li>{{ article.disqus_comment_count }} Comments</li>
