@@ -95,6 +95,29 @@ section {
     padding: 0 40px;
 }
 
+footer {
+    max-width: 700px;
+    font-size: 0.8em;
+    margin: 10px auto;
+    padding: 10px 30px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 15px 0;
+    border-top: 1px solid #E9E9E7;
+}
+
+footer ul li {
+    display: inline-block;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+footer ul li a {
+    border: 0;
+}
+
 .timeline {
     display: block;
     width: 4px;
@@ -296,6 +319,10 @@ article > a, .tags, .tags * {
         position: absolute;
         z-index: 2;
         min-height: 100%;
+    }
+
+    footer {
+        display: none;
     }
 
     .timeline-bullet {
