@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*- #
 
 from __future__ import unicode_literals
+from os import environ
 
 
 AUTHOR = u'Kyle Fuller'
 SITENAME = u'Cocode'
-#SITEURL = 'http://www.cocode.org'
+SITEURL = environ.get('PELICAN_SITEURL', 'http://www.cocode.org')
 
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
 DEFAULT_PAGINATION = 10
 
-SITEURL = 'http://localhost:8000'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
