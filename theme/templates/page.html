@@ -1,0 +1,20 @@
+{% extends "blog_base.html" %}
+
+{% block title %}{{ page.title|striptags }}{% endblock %}
+
+{% block content %}
+<header class="small"><h1><a href="{{ SITEURL }}/">Cocode</a></h1></header>
+
+<section class="large">
+    <article>
+        <h2><a id="back" href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags }}">{{ page.title }}</a></h2>
+
+        {% if page.date %}
+        <small>Last updated at: {{ page.date|strftime('%d %B %Y') }}</small>
+        {% endif %}
+
+        {{ page.content }}
+    </article>
+</section>
+{% endblock %}
+
