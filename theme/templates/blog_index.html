@@ -1,12 +1,12 @@
 {% extends "blog_base.html" %}
 
 {% block content %}
-<header><h1><a href="/blog">Cocode</a></h1></header>
+<header><h1><a href="{{ SITEURL }}/blog">Cocode</a></h1></header>
 
 <section>
   {% for article in articles_page.object_list %}
   <div class="timeline-bullet icon-{{ article.category }}"></div>
-  <article>
+    <article>
         <div class="timeline"></div>
         <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 

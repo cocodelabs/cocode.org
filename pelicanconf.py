@@ -12,7 +12,7 @@ SITEURL = environ.get('PELICAN_SITEURL', 'http://www.cocode.org')
 TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = u'en'
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 0
 
 RELATIVE_URLS = False
 
@@ -38,6 +38,7 @@ ARTICLE_DIR = 'blog'
 ARTICLE_URL = 'blog/{slug}'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
+FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
 
 SUMMARY_MAX_LENGTH = 50
