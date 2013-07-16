@@ -5,13 +5,13 @@ from __future__ import unicode_literals
 from os import environ
 
 
-AUTHOR = u'Kyle Fuller'
-SITENAME = u'Cocode'
+AUTHOR = 'Kyle Fuller'
+SITENAME = 'Cocode'
 SITEURL = environ.get('PELICAN_SITEURL', 'http://www.cocode.org')
 
 TIMEZONE = 'Europe/London'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 DEFAULT_PAGINATION = 0
 
 RELATIVE_URLS = False
@@ -38,7 +38,19 @@ ARTICLE_DIR = 'blog'
 ARTICLE_URL = 'blog/{slug}'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
+TAGS_SAVE_AS = 'blog/tags/index.html'
+
+TAG_URL = 'blog/tags/{slug}/'
+TAG_SAVE_AS = 'blog/tags/{slug}/index.html'
+
+CATEGORY_URL = 'blog/category/{slug}/'
+CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
+
+ARCHIVES_SAVE_AS = 'blog/archvives/index.html'
+
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
+TRANSLATION_FEED_ATOM = 'blog/feeds/all-%s.atom.xml'
 
 SUMMARY_MAX_LENGTH = 50
