@@ -2,6 +2,8 @@
 
 {% block title %}{{ page.title|striptags }}{% endblock %}
 
+{% block body_id %}{{ page.category }}{% endblock %}
+
 {% block content %}
 <header class="small"><h1><a href="{{ SITEURL }}/">Cocode</a></h1></header>
 

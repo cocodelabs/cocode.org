@@ -15,7 +15,7 @@
         {% block extra_head %}{% endblock %}
     </head>
 
-    <body>
+    <body id="{% block body_id %}{% endblock %}">
         {% block body %}
             {% block content %}
             {% endblock %}

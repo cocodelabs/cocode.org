@@ -1,4 +1,5 @@
 Title: Terms of Service
+Category: legal
 Date: 2013-07-13
 
 By using the Cocode.org web site ("Service"), or any services of Cocode LTD
