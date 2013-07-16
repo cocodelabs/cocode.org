@@ -1,7 +1,7 @@
 {% extends "blog_base.html" %}
 
 {% block content %}
-<header><h1><a href="{{ SITEURL }}/blog">Cocode</a></h1></header>
+<header><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
 
 <section>
   {% for article in articles_page.object_list %}

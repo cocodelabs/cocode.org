@@ -32,10 +32,11 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 # Blog
 
+BLOG_URL = 'blog/'
 BLOG_INDEX_SAVE_AS = 'blog/index.html'
 
 ARTICLE_DIR = 'blog'
-ARTICLE_URL = 'blog/{slug}'
+ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
 TAGS_SAVE_AS = 'blog/tags/index.html'

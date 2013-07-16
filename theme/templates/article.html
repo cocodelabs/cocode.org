@@ -3,13 +3,13 @@
 {% block title %}{{ article.title|striptags }}{% endblock %}
 
 {% block content %}
-<header class="small"><h1><a href="{{ SITEURL }}/blog">Cocode</a></h1></header>
+<header class="small"><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
 
 <section class="large">
     <article>
         <h2><a id="back" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
-        <ul>
+        <ul class="meta">
             <li>{{ article.date|strftime('%d %B %Y') }}</li>
             <li>{{ article.tags|count }} Tags</li>
             <li>{{ article.disqus_comment_count }} Comments</li>
