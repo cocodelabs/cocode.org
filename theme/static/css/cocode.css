@@ -96,16 +96,16 @@ section {
 }
 
 footer {
-    max-width: 700px;
     font-size: 0.8em;
     margin: 10px auto;
-    padding: 10px 30px;
 }
 
 footer ul {
     list-style: none;
     padding: 15px 0;
+    /*
     border-top: 1px solid #E9E9E7;
+    */
 }
 
 footer ul li {
@@ -321,10 +321,6 @@ article > a, .tags, .tags * {
         min-height: 100%;
     }
 
-    footer {
-        display: none;
-    }
-
     .timeline-bullet {
         background: url(../images/timeline-bullet.png);
         background-size: 60px 68px;
@@ -494,14 +490,14 @@ article > a, .tags, .tags * {
         z-index: 2;
     }
 
-    section.large {
+    section#large {
         padding-left: 0;
         margin-left: 180px;
         margin-top: 50px;
         max-width: 750px;
     }
 
-    section.large article:before {
+    section#large article:before {
         display: none;
     }
 }

@@ -2,10 +2,13 @@
 
 {% block title %}{{ article.title|striptags }}{% endblock %}
 
-{% block content %}
-<header class="small"><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
+{% block header %}
+    <header class="small"><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
+{% endblock %}
 
-<section class="large">
+{% block section_id %}large{% endblock %}
+
+{% block content %}
     <article>
         <h2><a id="back" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
@@ -35,6 +38,5 @@
             </div>
         </div>
     </article>
-</section>
 {% endblock %}
 

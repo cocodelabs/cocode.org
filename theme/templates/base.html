@@ -16,9 +16,12 @@
     </head>
 
     <body id="{% block body_id %}{% endblock %}">
-        {% block body %}
-            {% block content %}
-            {% endblock %}
+      {% block header %}
+      {% endblock %}
+
+      <section id="{% block section_id %}{% endblock %}">
+          {% block content %}
+          {% endblock %}
 
           {% block footer %}
             <footer>
@@ -29,7 +32,7 @@
                 </ul>
             </footer>
           {% endblock %}
-        {% endblock %}
+        </section>
     </body>
 </html>
 

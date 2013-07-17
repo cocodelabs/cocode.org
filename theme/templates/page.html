@@ -4,10 +4,13 @@
 
 {% block body_id %}{{ page.category }}{% endblock %}
 
-{% block content %}
+{% block header %}
 <header class="small"><h1><a href="{{ SITEURL }}/">Cocode</a></h1></header>
+{% endblock %}
 
-<section class="large">
+{% block section_id %}large{% endblock %}
+
+{% block content %}
     <article>
         <h2><a id="back" href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags }}">{{ page.title }}</a></h2>
 
@@ -17,6 +20,5 @@
 
         {{ page.content }}
     </article>
-</section>
 {% endblock %}
 

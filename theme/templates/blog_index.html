@@ -1,9 +1,12 @@
 {% extends "blog_base.html" %}
 
-{% block content %}
-<header><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
+{% block body_id %}blog_index{% endblock %}
 
-<section>
+{% block header %}
+<header><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
+{% endblock %}
+
+{% block content %}
   {% for article in articles_page.object_list %}
   <div class="timeline-bullet icon-{{ article.category }}"></div>
     <article>
@@ -25,6 +28,5 @@
         {% endif %}
     </article>
   {% endfor %}
-</section>
 {% endblock %}
 
