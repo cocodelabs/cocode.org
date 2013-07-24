@@ -64,7 +64,7 @@ h1 {
 
 h1 a {
     display: block;
-    text-indent: -999px;
+    text-indent: -9999px;
     width: 230px;
     height: 75px;
 }
@@ -500,5 +500,40 @@ article > a, .tags, .tags * {
     section#large article:before {
         display: none;
     }
+}
+
+/* homepage */
+
+body#homepage {
+    background: #312a29;
+    text-align: center;
+    color: #B7AFAF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body#homepage h1 {
+    background: url(../images/logo_home.png) no-repeat;
+    background-size: 307px 296px;
+    background-position: top center;
+    width: 307px;
+    height: 250px;
+    margin-top: 100px;
+    opacity: 0.3;
+    transition: opacity .75s ease-in-out;
+    -webkit-transition: opacity .75s ease-in-out;
+}
+
+body#homepage h1:hover {
+    opacity: 1.0;
+}
+
+body#homepage p {
+    margin: 0;
+    padding: 0 60px;
+}
+
+body#homepage em {
+    font-weight: normal;
 }
 
