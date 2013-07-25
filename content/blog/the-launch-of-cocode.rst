@@ -9,7 +9,7 @@ Today I'm proud to announce the public launch of Cocode. Cocode is a company
 formed from the team behind Palaver, an awesome IRC client for iOS.
 
 Our first product to branded launched under this new company is Palaver, but it
-doesn't stop there. We are busy working hard on some new and exciting products
+doesn't stop there. We are busy working on some new and exciting products
 and services. We aim to bring some secure and privacy focused services and
 applications to the table in the near future.
 
