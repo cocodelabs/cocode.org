@@ -79,6 +79,13 @@ ul {
     margin: 0;
 }
 
+blockquote {
+    border-left: 5px solid #E9E9E7;
+    padding-left: 15px;
+    margin-left: 15px;
+    font-style: italic;
+}
+
 header {
     background: #2B2622 url(../images/bg-bottom.jpg) bottom no-repeat;
     background-size: 100% auto;
