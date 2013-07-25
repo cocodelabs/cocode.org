@@ -25,11 +25,11 @@
         {% endif %}
 
         <div class="card">
-            <img src="{{ article.avatar }}" />
+            <img src="{{ article.author.avatar }}" />
 
             <div class="author">
-                <a href="#"><strong>{{ article.author }}</strong></a>
-                <p>{{ article.position }}</p>
+                <a href="{{ article.author.url }}"><strong>{{ article.author }}</strong></a>
+                <p>{{ article.author.title }}</p>
             </div>
 
             <div class="date">

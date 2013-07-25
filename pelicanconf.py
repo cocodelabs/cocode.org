@@ -55,3 +55,21 @@ CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = 'blog/feeds/all-%s.atom.xml'
 
 SUMMARY_MAX_LENGTH = 50
+
+# Plugins
+
+PLUGIN_PATH = 'plugins'
+PLUGINS = ['author']
+
+# Authors
+
+AUTHORS = {
+    'kyle': {
+        'name': 'Kyle Fuller',
+        'title': 'Managing Director',
+        #'url': 'http://kylefuller.co.uk/',
+        'email': 'kyle@cocode.org',
+        'avatar': 'http://www.gravatar.com/avatar/d200a17dd269fd4001bacb11662dab4b.png?s=100'
+    }
+}
+
