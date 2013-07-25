@@ -47,6 +47,9 @@ TAG_SAVE_AS = 'blog/tags/{slug}/index.html'
 CATEGORY_URL = 'blog/category/{slug}/'
 CATEGORY_SAVE_AS = 'blog/category/{slug}/index.html'
 
+AUTHOR_URL = 'blog/authors/{slug}/'
+AUTHOR_SAVE_AS = 'blog/authors/{slug}/index.html'
+
 ARCHIVES_SAVE_AS = 'blog/archvives/index.html'
 
 FEED_DOMAIN = SITEURL
