@@ -214,7 +214,7 @@ ul.tags li a:hover {
 .card {
     position: relative;
     border-top: 1px solid #E9E9E7;
-    padding: 45px 5px 70px;
+    padding: 45px 5px 0px;
     display: block;
     margin-top: 50px;
 }
@@ -225,7 +225,7 @@ ul.tags li a:hover {
     width: 70px;
     display: block;
     position: absolute;
-    left: 0;
+    left: 25px;
     top: 35px;
 }
 
@@ -235,10 +235,11 @@ ul.tags li a:hover {
 }
 
 .card .date {
-    width: 177px;
+    max-width: 177px;
     position: absolute;
-    right: 0;
+    right: 25px;
     top: 45px;
+    text-align: right;
 }
 
 .card a {
@@ -519,6 +520,9 @@ body#homepage {
     color: #B7AFAF;
     font-weight: bold;
     font-size: 20px;
+
+    background-origin: padding-box;
+    background-position: 50% 50%;
 }
 
 body#homepage div {
