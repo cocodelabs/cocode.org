@@ -30,7 +30,7 @@ circumstances:
 * It is necessary to share information in order to investigate, prevent, or
   take action regarding illegal activities, suspected fraud, situations
   involving potential threats to the physical safety of any person, violations
-  of Terms of Service, or as otherwise required by law.
+  of [Terms of Service](/terms-of-service/), or as otherwise required by law.
 
 * We transfer information about you if GitHub is acquired by or merged with
   another company. In this event, GitHub will notify you before information
@@ -47,7 +47,7 @@ Cocode application, you retain all rights to your data.
 
 Cocode may disclose personally identifiable information under special
 circumstances, such as to comply with subpoenas or when your actions violate
-the Terms of Service.
+the [Terms of Service](/terms-of-service/)
 
 ### Changes
 
@@ -58,6 +58,6 @@ the change taking effect.
 
 ### Questions
 
-Questions about the Terms of Service should be sent to
+Questions about the Privacy Policy should be sent to
 [support@cocode.org](mailto:support@cocode.org).
 
