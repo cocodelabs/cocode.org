@@ -12,7 +12,7 @@
 
 {% block content %}
     <article>
-        <h2><a id="back" href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags }}">{{ page.title }}</a></h2>
+        <h1><a id="back" href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalink to {{ page.title|striptags }}">{{ page.title }}</a></h1>
 
         {% if page.date %}
         <small>Last updated at: {{ page.date|strftime('%d %B %Y') }}</small>

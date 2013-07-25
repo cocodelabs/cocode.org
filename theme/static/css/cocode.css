@@ -43,13 +43,13 @@ a:hover {
 h1 a, h2 a, h3 a, h4 a, h5 a { color: #2C2C2E; border: 0; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover { color: #ed7859; border: 0; }
 
-h2 {
+#blog_index h2, h1 {
     font-size: 30px;
     margin: 15px 0 0 0;
     line-height:1.3em;
 }
 
-h1 {
+header h1 {
     display: inline-block;
 
     margin: 20px;
@@ -62,14 +62,14 @@ h1 {
     height: 75px;
 }
 
-h1 a {
+header h1 a {
     display: block;
     text-indent: -9999px;
     width: 230px;
     height: 75px;
 }
 
-body#legal h1 {
+body#legal header h1 {
     background: url(../images/logo_legal.png) bottom left no-repeat;
     background-size: 230px 75px;
 }
