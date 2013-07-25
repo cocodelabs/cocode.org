@@ -506,10 +506,22 @@ article > a, .tags, .tags * {
 
 body#homepage {
     background: #312a29;
+    background: url(../images/background_repeatable.jpg) center bottom;
+    background-size: auto 100%;
     text-align: center;
     color: #B7AFAF;
     font-weight: bold;
     font-size: 20px;
+}
+
+body#homepage div {
+    background: url(../images/background_middle.jpg) center bottom no-repeat;
+    height: 100%;
+    background-size: auto 100%;
+    width: auto;
+
+    position: absolute;
+    left: 50%;
 }
 
 body#homepage h1 {

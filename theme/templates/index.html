@@ -3,7 +3,19 @@
 {% block body_id %}homepage{% endblock %}
 
 {% block body %}
+<div>
     <h1><a href="{{ SITEURL }}/">Cocode</a></h1>
     <p>coming soon <em>(meanwhile, check out our <a href="{{ SITEURL }}/{{ BLOG_URL }}" alt="Cocode Blog">blog</a>)</em></p>
+</div>
+
+<script>
+    function rescaleMiddleBackground() {
+        $('div').css('margin-left', -($('div').width()/2) + "px");
+    }
+
+    $(window).resize(rescaleMiddleBackground);
+    $(window).ready(rescaleMiddleBackground);
+    $(window).load(rescaleMiddleBackground);
+</script>
 {% endblock %}
 
