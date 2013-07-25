@@ -3,6 +3,7 @@ The launch of Cocode
 
 :date: 2013-07-25
 :author: kyle
+:category: date
 :tags: Palaver, Cocode
 
 Today I'm proud to announce the public launch of Cocode. Cocode is a company
