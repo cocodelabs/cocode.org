@@ -512,51 +512,59 @@ article > a, .tags, .tags * {
 
 /* homepage */
 
-body#homepage {
-    background: #312a29;
-    background: url(../images/background_repeatable.jpg) center bottom;
-    background-size: auto 100%;
-    text-align: center;
-    color: #B7AFAF;
-    font-weight: bold;
-    font-size: 20px;
-
-    background-origin: padding-box;
-    background-position: 50% 50%;
+body#homepage em {
+    font-weight: normal;
 }
 
-body#homepage div {
-    background: url(../images/background_middle.jpg) center bottom no-repeat;
-    height: 100%;
+body#homepage {
+    margin: 0px;
+    padding: 0px;
+    background: #312a29;
+    background-image: url(../images/background_middle.jpg), url(../images/background_repeatable.jpg);
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+    background-position: 80% 70%;
     background-size: auto 100%;
-    width: auto;
-
-    position: absolute;
-    left: 50%;
 }
 
 body#homepage h1 {
     background: url(../images/logo_home.png) no-repeat;
+    position: fixed;
     background-size: 307px 296px;
-    background-position: top center;
+    background-position: center center;
     width: 307px;
-    height: 250px;
-    margin-top: 100px;
-    opacity: 0.3;
-    transition: opacity .75s ease-in-out;
-    -webkit-transition: opacity .75s ease-in-out;
+    height: 296px;
+    top: 32%;
+    left: 50%;
+    margin-top: -68px;
+    margin-left: -153px;
+    opacity: 0.7;
+    transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    text-indent: -9999px;
 }
 
 body#homepage h1:hover {
-    opacity: 1.0;
+    opacity: 1;
 }
 
 body#homepage p {
-    margin: 0;
-    padding: 0 60px;
+    position: absolute;
+    display: block;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 32%;
+    margin-top: 200px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.6;
 }
 
-body#homepage em {
-    font-weight: normal;
+body#homepage a {
+    color: #ed7859;
+    text-decoration: none;
 }
 
