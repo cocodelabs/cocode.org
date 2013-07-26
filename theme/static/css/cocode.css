@@ -43,6 +43,10 @@ a:hover {
 h1 a, h2 a, h3 a, h4 a, h5 a { color: #2C2C2E; border: 0; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover { color: #ed7859; border: 0; }
 
+h2 {
+    margin-top: 40px;
+}
+
 #blog_index h2, h1 {
     font-size: 30px;
     margin: 15px 0 0 0;
@@ -182,6 +186,12 @@ ul.tags {
     margin-top: 35px;
     list-style: none;
     padding: 0;
+}
+
+ul.tags:before {
+    content: "Tags:";
+    margin-right: 10px;
+    font-weight: bold !important;
 }
 
 ul.tags li {
