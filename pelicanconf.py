@@ -7,7 +7,7 @@ from os import environ
 
 AUTHOR = 'Kyle Fuller'
 SITENAME = 'Cocode'
-SITEURL = environ.get('PELICAN_SITEURL', 'http://www.cocode.org')
+SITEURL = environ.get('PELICAN_SITEURL', 'http://cocode.org')
 
 TIMEZONE = 'Europe/London'
 
