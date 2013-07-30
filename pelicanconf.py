@@ -76,3 +76,7 @@ AUTHORS = {
     }
 }
 
+# Analytics
+
+GAUGES = '51f83b87108d7b160a000007'
+
