@@ -12,6 +12,14 @@
 
 {% block footer %}
     {{ super() }}
-    <script type="text/javascript">function f(){var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px");$(".timeline").each(function(){$(this).height($(this).parent().height())})}$(window).resize(function(){f()});f();</script>
+    <script type="text/javascript">
+        function f(){
+            var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px");
+            $(".timeline").each(function(){$(this).height($(this).parent().height())})
+            $('.timeline:last-of-type').height(document.height - $('.timeline:last-of-type').offset().top);
+        }
+        $(window).resize(f);
+        f();
+    </script>
 {% endblock %}
 
