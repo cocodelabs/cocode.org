@@ -64,7 +64,9 @@ DISQUS_SITENAME = 'cocodeorg'
 # Plugins
 
 PLUGIN_PATH = 'plugins'
-PLUGINS = ['author']
+PLUGINS = ['author', 'summary']
+
+SUMMARY_END_MARKER = '---'
 
 # Authors
 
