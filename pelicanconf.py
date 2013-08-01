@@ -59,6 +59,8 @@ TRANSLATION_FEED_ATOM = 'blog/feeds/all-%s.atom.xml'
 
 SUMMARY_MAX_LENGTH = 50
 
+DISQUS_SITENAME = 'cocodeorg'
+
 # Plugins
 
 PLUGIN_PATH = 'plugins'

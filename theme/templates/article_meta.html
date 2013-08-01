@@ -1,7 +1,7 @@
 <ul class="meta">
     <li>{{ article.date|strftime('%d %B %Y') }}</li>
     <li>{{ article.tags|count }} Tags</li>
-    {#<li>{{ article.disqus_comment_count }} Comments</li>#}
+    <li data-disqus-identifier="{{ article.url }}">0 Comments</li>
     {#<li>0 Shares</li>#}
 </ul>
 

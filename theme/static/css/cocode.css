@@ -220,6 +220,12 @@ ul.tags li a:hover {
     border: none;
 }
 
+.comments {
+    margin-top: 50px;
+    padding-top: 15px;
+    border-top: 1px solid #E9E9E7;
+}
+
 .card {
     position: relative;
     border-top: 1px solid #E9E9E7;
