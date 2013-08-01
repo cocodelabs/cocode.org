@@ -1,5 +1,4 @@
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -336,7 +335,6 @@ article > a, .tags, .tags * {
         padding-left: 100px;
         position: absolute;
         z-index: 2;
-        min-height: 100%;
     }
 
     .timeline-bullet {
