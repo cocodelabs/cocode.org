@@ -471,10 +471,6 @@ article > a, .tags, .tags * {
         display: none;
     }
 
-    article > ul > li:last-child {
-        display: none;
-    }
-
     .timeline-bullet {display: none;}
 
     .card .date {
