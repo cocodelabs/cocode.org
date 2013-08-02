@@ -7,14 +7,14 @@ Palaver 1.1.4 is now out
 :author: kyle
 
 We just released a small update to Palaver for iOS, with some handy
-improvements. It is now availible in the App Store. This update brings a
+improvements. It is now available in the App Store. This update brings a
 lot of bug fixes, with enhancements to the commands and support for third party
 servers.
 
 ---
 
-Changelog for Palaver 1.1.4
----------------------------
+Change log for Palaver 1.1.4
+----------------------------
 
 - Support `/topic` and `/kick`.
 - Fixes an issue with bold and underlines.
