@@ -1,5 +1,9 @@
 {% extends "blog_base.html" %}
 
+{% block mixpanel_event %}
+mixpanel.track('View Blog Article List');
+{% endblock %}
+
 {% block body_id %}blog_index{% endblock %}
 
 {% block header %}

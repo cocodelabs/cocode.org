@@ -1,5 +1,12 @@
 {% extends "blog_base.html" %}
 
+{% block mixpanel_event %}
+mixpanel.track('View Page', {
+    title: "{{ page.title|striptags }}",
+    category: "{{ page.category }}"
+});
+{% endblock %}
+
 {% block title %}{{ page.title|striptags }}{% endblock %}
 
 {% block body_id %}{{ page.category }}{% endblock %}

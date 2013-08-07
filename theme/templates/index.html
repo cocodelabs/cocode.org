@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block mixpanel_event %}
+mixpanel.track('View Landing Page');
+{% endblock %}
+
 {% block body_id %}homepage{% endblock %}
 
 {% block body %}

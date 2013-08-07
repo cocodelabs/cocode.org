@@ -1,4 +1,10 @@
 {% extends "blog_index.html" %}
 
+{% block mixpanel_event %}
+mixpanel.track('View Blog Tag Detail', {
+    tag: "{{ tag }}"
+});
+{% endblock %}
+
 {% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
 

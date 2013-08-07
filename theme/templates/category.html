@@ -1,4 +1,10 @@
 {% extends "blog_index.html" %}
 
+{% block mixpanel_event %}
+mixpanel.track('View Blog Category Detail', {
+    category: "{{ category }}"
+});
+{% endblock %}
+
 {% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
 
