@@ -4,8 +4,7 @@
 mixpanel.track('View Blog Article', {
     title: "{{ article.title|striptags }}",
     author: "{{ article.author }}",
-    category: "{{ article.category }}",
-    tags: [{% for tag in article.tags %}"{{ tag }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    category: "{{ article.category }}"
 });
 {% endblock %}
 
