@@ -11,5 +11,5 @@ def author_context_injection(article_generator, metadata):
             setattr(author, key, author_meta[key])
 
 def register():
-    signals.article_generate_context.connect(author_context_injection)
+    signals.article_generator_context.connect(author_context_injection)
 
