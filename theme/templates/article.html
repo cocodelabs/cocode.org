@@ -36,7 +36,13 @@ mixpanel.track('View Blog Article', {
             <img src="{{ article.author.avatar }}" />
 
             <div class="author">
-                <a href="{{ SITEURL }}/{{ article.author.url }}"><strong>{{ article.author }}</strong></a>
+                {% if article.author.website %}
+                  <a href="{{ article.author.website }}">
+                {% else %}
+                  <a href="{{ SITEURL }}/{{ article.author.url }}">
+               {% endif %}
+                    <strong>{{ article.author }}</strong>
+                </a>
                 <p>{{ article.author.title }}</p>
             </div>
 

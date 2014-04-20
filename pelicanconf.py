@@ -74,7 +74,7 @@ AUTHORS = {
     'kyle': {
         'name': 'Kyle Fuller',
         'title': 'Managing Director',
-        #'url': 'http://kylefuller.co.uk/',
+        'website': 'http://kylefuller.co.uk/',
         'email': 'kyle@cocode.org',
         'avatar': 'http://www.gravatar.com/avatar/d200a17dd269fd4001bacb11662dab4b.png?s=100'
     }
