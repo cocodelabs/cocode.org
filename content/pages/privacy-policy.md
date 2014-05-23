@@ -32,8 +32,8 @@ circumstances:
   involving potential threats to the physical safety of any person, violations
   of [Terms of Service](/terms-of-service/), or as otherwise required by law.
 
-* We transfer information about you if GitHub is acquired by or merged with
-  another company. In this event, GitHub will notify you before information
+* We transfer information about you if Cocode is acquired by or merged with
+  another company. In this event, Cocode will notify you before information
   about you is transferred and becomes subject to a different privacy policy.
 
 ### Data
