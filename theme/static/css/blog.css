@@ -58,7 +58,7 @@ header h1 {
     margin: 20px;
     text-align: center;
 
-    background: url(../images/logo_blog.png) bottom left no-repeat;
+    background: url(../images/blog/logo_blog.png) bottom left no-repeat;
     background-size: 230px 75px;
 
     width: 230px;
@@ -73,7 +73,7 @@ header h1 a {
 }
 
 body#legal header h1 {
-    background: url(../images/logo_legal.png) bottom left no-repeat;
+    background: url(../images/blog/logo_legal.png) bottom left no-repeat;
     background-size: 230px 75px;
 }
 
@@ -90,7 +90,7 @@ blockquote {
 }
 
 header {
-    background: #2B2622 url(../images/bg-bottom.jpg) bottom no-repeat;
+    background: #2B2622 url(../images/blog/bg-bottom.jpg) bottom no-repeat;
     background-size: 100% auto;
 
     height: 280px;
@@ -325,8 +325,8 @@ article > a, .tags, .tags * {
 
     header {
         position: fixed;
-        background: url(../images/bg-bottom.jpg) bottom no-repeat,
-                    url(../images/bg-repeat.jpg);
+        background: url(../images/blog/bg-bottom.jpg) bottom no-repeat,
+                    url(../images/blog/bg-repeat.jpg);
         background-size: 100% auto;
         height:100%;
         float: left;
@@ -344,7 +344,7 @@ article > a, .tags, .tags * {
     }
 
     .timeline-bullet {
-        background: url(../images/timeline-bullet.png);
+        background: url(../images/blog/timeline-bullet.png);
         background-size: 60px 68px;
         width: 60px;
         height: 63px;
@@ -365,7 +365,7 @@ article > a, .tags, .tags * {
     div[class*='icon']:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-general.png) no-repeat;
+        background: url(../images/blog/icon-general.png) no-repeat;
         background-size: 24px 24px;
         width: 24px;
         height: 63px;
@@ -375,7 +375,7 @@ article > a, .tags, .tags * {
     .icon-apps:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-apps.png) no-repeat !important;
+        background: url(../images/blog/icon-apps.png) no-repeat !important;
         background-position: center center !important; 
         background-size: 24px 26px !important;
         width: 26px !important;
@@ -385,7 +385,7 @@ article > a, .tags, .tags * {
     .icon-date:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-date.png) no-repeat !important;
+        background: url(../images/blog/icon-date.png) no-repeat !important;
         background-position: center center !important; 
         background-size: 24px 24px !important;
         width: 24px !important;
@@ -395,7 +395,7 @@ article > a, .tags, .tags * {
     .icon-event:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-event.png) no-repeat !important;
+        background: url(../images/blog/icon-event.png) no-repeat !important;
         background-position: center center !important; 
         background-size: 17px 24px !important;
         width: 17px !important;
@@ -405,7 +405,7 @@ article > a, .tags, .tags * {
     .icon-labs:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-labs.png) no-repeat !important; 
+        background: url(../images/blog/icon-labs.png) no-repeat !important; 
         background-position: center center !important; 
         background-size: 21px 35px !important;
         width: 21px !important;
@@ -415,7 +415,7 @@ article > a, .tags, .tags * {
     .icon-love:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-love.png) no-repeat !important; 
+        background: url(../images/blog/icon-love.png) no-repeat !important; 
         background-position: center center !important; 
         background-size: 24px 21px !important;
         width: 24px !important;
@@ -425,7 +425,7 @@ article > a, .tags, .tags * {
     .icon-picture:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-picture.png) no-repeat !important; 
+        background: url(../images/blog/icon-picture.png) no-repeat !important; 
         background-position: center center !important; 
         background-size: 24px 21px !important;
         width: 24px !important;
@@ -435,7 +435,7 @@ article > a, .tags, .tags * {
     .icon-user:after {
         content: "";
         display: inline-block;
-        background: url(../images/icon-user.png) no-repeat !important;
+        background: url(../images/blog/icon-user.png) no-repeat !important;
         background-position: center center !important; 
         background-size: 24px 26px !important;
         width: 26px !important;
@@ -530,7 +530,7 @@ body#homepage {
     margin: 0px;
     padding: 0px;
     background: #312a29;
-    background-image: url(../images/background_middle.jpg), url(../images/background_repeatable.jpg);
+    background-image: url(../images/blog/background_middle.jpg), url(../images/blog/background_repeatable.jpg);
     background-repeat: no-repeat, repeat;
     background-attachment: fixed;
     background-position: 80% 70%;
@@ -538,7 +538,7 @@ body#homepage {
 }
 
 body#homepage h1 {
-    background: url(../images/logo_home.png) no-repeat;
+    background: url(../images/blog/logo_home.png) no-repeat;
     position: fixed;
     background-size: 307px 296px;
     background-position: center center;
