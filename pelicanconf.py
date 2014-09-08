@@ -64,7 +64,7 @@ DISQUS_SITENAME = 'cocodeorg'
 # Plugins
 
 PLUGIN_PATH = 'plugins'
-PLUGINS = ('author', 'summary', 'assets')
+PLUGINS = ('author', 'summary', 'assets', 'gzip_cache')
 
 SUMMARY_END_MARKER = '---'
 
