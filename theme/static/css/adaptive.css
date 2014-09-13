@@ -1,0 +1,409 @@
+/*
+ * CSS to make the site adapt to different screen resolutions
+ */
+
+@media screen and (max-width: 1090px) {
+    section > *, footer > * {
+        width: 860px;
+    }
+
+    section#how {
+        padding: 50px 0 40px 0;
+    }
+
+    section#what p {
+        width: 450px;
+    }
+
+    section#what #ipad {
+        display: none;
+    }
+
+    section#what #iphone {
+        background: url(../images/splash.png);
+        background-size: 100% 100%;
+        display: block;
+        width: 135px;
+        height: 205px;
+        margin: 56px 40px 0 0;
+    }
+
+    section#what #iphone:after {
+        content: "";
+        background-position: -588px 0px;
+        background-size: 768px 1201px;
+        margin: -57px 0 0 -18px;
+        display: block;
+        width: 172px;
+        height: 323px;
+        position: absolute;
+    }
+
+    section#who {
+        margin: 50px 0 50px 0;
+    }
+
+    section#who p {
+        width: 225px;
+    }
+
+    section#who p:nth-of-type(2) {
+        margin: -190px 200px 0 0;
+    }
+
+    section#who h3:nth-of-type(2) {
+        margin: -194px 200px 0 0;
+    }
+
+    section#who span {
+        display: inline-block;
+        margin: 0 0 20px 0;
+    }
+
+    section#blog {
+        margin: 20px 0 40px 0;
+    }
+
+    section#quotes input:nth-of-type(3) {
+        margin: -47px 25px 1px 0;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    section > *, footer > * {
+        width: 650px;
+    }
+
+    header h1 {
+        width: 75px !important;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    section#how {
+        padding: 40px 0;
+    }
+
+    section#how ul li {
+        float: left;
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+
+    section#how ul li:last-of-type { margin: 0; }
+
+    section#what {
+        margin: 0 0 -25px 0;
+    }
+
+    section#what p {
+        width: 340px;
+    }
+
+    section#what #ipad {
+        display: none;
+    }
+
+    section#what #iphone {
+        display: none;
+    }
+
+    section#who h3:nth-of-type(1)::before {
+        background-position: 0px -154px;
+        background-size: 256px 400px;
+        width: 106px;
+        height: 147px;
+        position: absolute;
+        margin: 10px 0 0 -120px;
+    }
+
+    section#who h3:nth-of-type(2)::after {
+        background-position: -106px -154px;
+        background-size: 256px 400px;
+        width: 106px;
+        height: 147px;
+        position: absolute;
+        margin: -20px 0 0 115px;
+    }
+
+    section#who p:nth-of-type(1), section#who h3:nth-of-type(1) {
+        margin-left: 110px;
+    }
+
+    section#who p:nth-of-type(2), section#who h3:nth-of-type(2) {
+        float: right;
+        text-align: right;
+        margin: -190px 110px 0 0;
+    }
+
+    section#who ul {
+        margin: 0 0 0 68px;
+    }
+
+    section#who ul:nth-of-type(2) {
+        float: right;
+        margin: -30px 100px 0 0;
+    }
+
+    section#quotes input:nth-of-type(3) {
+        margin: -47px 17px 1px 0 !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    section > *, footer > * {
+        width: 95%;
+    }
+
+    section#why header h1 {
+        background-size: 384px 600px;
+        background-position: 0px -544px;
+        width: 56px !important;
+        height: 56px;
+        margin: 15px auto -70px auto;
+        float: none;
+        text-indent: -999px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header nav:after {
+        content: "";
+        position: absolute;
+        display: block !important;
+        left: 0;
+        top: 0.25em;
+        width: 1em;
+        height: 0.15em;
+        background: #fff;
+        box-shadow: 
+        0 0.25em 0 0 black,
+        0 0.5em 0 0 black;
+    }
+
+    section#how {
+        padding: 40px 0 35px 0;
+    }
+
+    section#how ul li h3 {
+        font-size: 14px;
+    }
+
+    section#how ul li h3::before {
+        margin: 0 10px -7px 15px;
+    }
+
+    section#how ul li {
+        float: left;
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+
+    section#what {
+        margin: 0 0 -160px 0;
+        padding: 50px 0;
+    }
+
+    section#what ul {
+        height: 60px;
+    }
+
+    section#what ul li {
+        display: none;
+    }
+
+    section#what ul::before {
+        display: none;
+    }
+
+    section#what ul li.current {
+        display: block;
+        background-position: 0px -303px;
+        background-size: 256px 400px;
+        width: 60px;
+        height: 60px;
+        text-indent: -999px;
+    }
+
+    section#what h2 {
+        margin: 1px 0 0 85px;
+        padding: 0 10px 0 0;
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    section#what h2 mark::before {
+        content: "";
+        background-position: -145px -443px;
+        background-size: 313px 490px;
+        width: 95px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        clear: right;
+        margin: -37px 0 0 43px;
+    }
+
+    section#what p {
+        display: block;
+        margin: 20px 0 0 20px;
+        float: left;
+        width: 95%;
+    }
+
+    section#what a {
+        display: block;
+        float: left;
+        margin: 20px 0 0 20px;
+    }
+
+    section#what #ipad {
+        display: none;
+    }
+
+    section#what #iphone {
+        display: none;
+    }
+
+    section#who {
+        margin: 210px 0 20px 0;
+        width: 100%;
+        float: left;
+        color: #fff;
+        text-align: center;
+    }
+
+    section#who > canvas {
+        display: block;
+        position: absolute;
+        z-index: -2;
+        left: 0;
+        width: 100%;
+        right: 0;
+        border: none;
+        height: inherit;
+    }
+
+    section#who h2 {
+        font-size: 22px;
+    }
+
+    section#who h3 {
+        font-size: 16px;
+        padding: 20px 0 5px 0;
+        width: 65% !important;
+    }
+
+    section#who span {
+        font-size: 12px;
+    }
+
+    section#who h3:nth-of-type(1)::before {
+        background-position: 0px -154px;
+        background-size: 256px 400px;
+        width: 106px;
+        height: 147px;
+        position: absolute;
+        margin: 0px 0 0 -120px;
+    }
+
+    section#who h3:nth-of-type(2)::after {
+        background-position: -106px -154px;
+        background-size: 256px 400px;
+        width: 106px;
+        height: 147px;
+        position: absolute;
+        right: 0;
+        margin: -30px 0 0 0;
+    }
+
+    section#who p:nth-of-type(1), section#who h3:nth-of-type(1) {
+        margin: 0 10px 0 110px;
+        float: left;
+        width: auto;
+    }
+
+    section#who p:nth-of-type(2), section#who h3:nth-of-type(2) {
+        float: right;
+        text-align: right;
+        margin: 0 110px 0 10px;
+        width: auto;
+    }
+
+    section#who ul {
+        padding: 0;
+    }
+
+    section#who ul:first-of-type {
+        margin: 10px 0 30px 107px !important;
+    }
+
+    section#who ul:last-of-type {
+        margin: 10px 108px 30px 0 !important;
+    }
+
+    section#who ul li a {
+        margin: 0 3px;
+    }
+
+    section#blog h2 {
+        font-size: 22px;
+    }
+
+    section#blog ul li {
+        float: left;
+        width: 100%;
+        display: none;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    section#blog ul li:nth-of-type(1),
+    section#blog ul li:nth-of-type(2) {
+        display: block;
+    }
+
+    section#blog ul li article {
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        margin: 5px 20px 0 0;
+        padding: 13px 10px 48px 20px;
+        opacity: 0.7;
+        max-height: 130px;
+
+        -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+        -moz-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    section#blog a.blog {
+        float: right;
+        margin: -24px 21px 0 0;
+        color: #bbb;
+        white-space: nowrap;
+    }
+
+    section#quotes article:nth-of-type(1) {
+        float: left;
+        width: 100%;
+    }
+
+    section#quotes article blockquote {
+        padding: 0;
+        margin: 0 15px;
+    }
+
+    section#quotes article:nth-of-type(2) {
+        display: none;
+    }
+}
+
