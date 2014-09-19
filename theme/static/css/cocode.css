@@ -449,7 +449,7 @@ section#what #ipad {
 section#what #ipad::after {
     content: "";
     background-position: 0px 0px;
-    margin: -31px 0 0 -41px;
+    margin: -44px 0 0 -41px;
     width: 392px;
     height: 310px;
     display: block;
@@ -461,16 +461,15 @@ section#what #iphone {
     display: block;
     position: relative;
     float: right;
-    margin: -152px 80px 0 0;
     width: 90px;
-    height: 137px;
-    margin: 155px -378px 0 0;
+    height: 160px;
+    margin: 135px -378px 0 0;
 }
 
 section#what #iphone:after {
     content: "";
     background-position: -392px 0px;
-    margin: -38px 0 0 -12px;
+    margin: -26px 0 0 -12px;
     display: block;
     width: 115px;
     height: 216px;
