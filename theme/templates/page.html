@@ -12,7 +12,11 @@ mixpanel.track('View Page', {
 {% block body_id %}{{ page.category }}{% endblock %}
 
 {% block header %}
-<header class="small"><h1><a href="{{ SITEURL }}/">Cocode</a></h1></header>
+<header class="small">
+    <a href="{{ SITEURL }}//{{ BLOG_URL }}">
+        <h1>Cocode</h1>
+    </a>
+</header>
 {% endblock %}
 
 {% block section_id %}large{% endblock %}
