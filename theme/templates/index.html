@@ -8,10 +8,6 @@ mixpanel.track('Homepage');
   {% assets filters="cssmin", output="css/cocode.min.css", "css/cocode.css", "css/adaptive.css" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" type="text/css">
   {% endassets %}
-
-  <style>
-    html, body{ height: 100%; margin: 0; }
-  </style>
 {% endblock %}
 
 {% block body %}
