@@ -24,14 +24,10 @@ a {
     text-decoration: none;
     border-bottom: 1px solid #f6d2cb;
 
-    transition:.2s;
-    -webkit-transition: 0.2s;
-
-    transition-property: color, background, border-bottom;
-    -webkit-transition-property: color, background, border-bottom;
-
-    transition-timing-function: ease-in-out;
-    -webkit-transition-timing-function: ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
 a:hover {
@@ -76,6 +72,93 @@ body#legal header h1 {
     background: url(../images/blog/logo_legal.png) bottom left no-repeat;
     background-size: 230px 75px;
 }
+
+
+
+
+header h1 {
+    text-indent: -100%;
+    background: url(../images/sprite.png) no-repeat;
+    background-size: 512px 801px;
+    background-position: 0px -726px;
+    width: 230px;
+    height: 75px;
+    float: left;
+    margin: 20px 0 0 20px;
+    padding: 0;
+}
+
+/* logo submenu */
+header ul {
+    position: absolute;
+    padding: 0;
+    margin: 20px 0 0 20px;
+    list-style: none;
+    text-align: left;
+    z-index: 2;
+}
+
+header ul li {
+    color: #b2aaaa;
+    font-family: 'Avenir-Black', sans-serif;
+    display: none;
+    padding: 3px 0;
+    margin: 0 0 0 87px;
+    font-size: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header ul li:first-child a {
+    padding: 43px 0 0 87px;
+    margin: 0 0 0 -87px;
+    display: block;
+}
+
+header ul li a {
+    color: #b2aaaa;
+    font-family: 'Avenir-Black', sans-serif;
+    font-size: 15px;
+    border-bottom: none;
+}
+
+header ul:hover li {
+    width: 142px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+header ul:hover li:last-child {
+    border-bottom: none;
+}
+
+header ul:hover li:hover a {
+    color: #fff;
+    border-bottom: none;
+}
+
+header ul li:first-child {
+    display: block;
+    opacity: 1;
+}
+
+header ul li i {
+    font-style: normal;
+    font-family: 'AvenirNext-Italic', sans-serif;
+}
+
+
+
+
+
+
+
+
 
 ul {
     padding: 0 28px;
@@ -503,7 +586,7 @@ article > a, .tags, .tags * {
         color: #b2aaaa;
         font-size: 14px;
         display: block;
-        margin: -40px 0 0 -3px;
+        margin: -40px 0 0 62px;
         position: relative;
         z-index: 2;
     }
