@@ -7,7 +7,17 @@ mixpanel.track('View Blog Article List');
 {% block body_id %}blog_index{% endblock %}
 
 {% block header %}
-<header><h1><a href="{{ SITEURL }}/{{ BLOG_URL }}">Cocode</a></h1></header>
+<header>
+    <a href="{{ SITEURL }}//{{ BLOG_URL }}">
+        <h1>Cocode</h1>
+    </a>
+
+    <ul>
+        <li><a href="{{ SITEURL }}/{{ BLOG_URL }}">blog <i>/bl&#244;g/</i></a></li>
+        <li><a href="http://palaverapp.com/">palaver <i>/p&#601;&#183;lav&#183;&#601;r/</i></a></li>
+        <li><a href="{{ SITEURL }}">website <i>/web&#183;s&#299;t/</i></a></li>
+    </ul>
+</header>
 {% endblock %}
 
 {% block content %}
