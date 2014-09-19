@@ -8,10 +8,12 @@ html {
     -ms-text-size-adjust:100%;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
+    height: 100%;
 }
 
 body { 
-    margin: 20px auto 0 auto;
+    margin: 0;
+    height: 100%;
     padding: 0;
     background: #312a29;
     font-family:'Open Sans', sans-serif;
@@ -82,7 +84,7 @@ canvas {
 /* Header */
 section#why {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
     right: 0;
     width: 100%;
