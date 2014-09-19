@@ -49,8 +49,8 @@ mixpanel.track('View Blog Article List');
     <script type="text/javascript">
         function f(){
             var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px");
-            $(".timeline").each(function(){$(this).height($(this).parent().height())})
-            $('.timeline:last').height(document.height - $('.timeline:last').offset().top);
+            $(".timeline").each(function(){$(this).height($(this).parent().height())});
+            $('.timeline').last().height($(document).height() - $('.timeline').last().offset().top);
         }
         $(window).resize(f);
         f();
