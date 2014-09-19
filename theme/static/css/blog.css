@@ -362,6 +362,14 @@ pre {
     word-wrap: break-word;
 }
 
+.tagheader {
+    float: left;
+    font-size: 16px !important;
+    margin: 0px 0 -55px 0 !important;
+    top: -40px;
+    position: relative;
+}
+
 
 /* Disable selection of all elements except the ones that are interesting */
 * {
@@ -429,7 +437,7 @@ article > a, .tags, .tags * {
         padding-top: 5px;
     }
 
-    .timeline-bullet:first-child {
+    .timeline-bullet:first-of-type {
         background-position: 0 -5px;
         height: 63px;
         margin: 0 0 0 -132px;
