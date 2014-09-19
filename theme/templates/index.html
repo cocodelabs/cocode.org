@@ -5,7 +5,7 @@ mixpanel.track('Homepage');
 {% endblock %}
 
 {% block css %}
-  {% assets filters="cssmin", output="css/cocode.min.css", "css/cocode.css", "css/adaptive.css" %}
+  {% assets filters="cssmin", output="css/cocode.min.css", "css/cocode.css", "css/adaptive.css", "css/jquery.mCustomScrollbar.css" %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" type="text/css">
   {% endassets %}
 {% endblock %}
@@ -151,5 +151,13 @@ mixpanel.track('Homepage');
             </ul>
         </div>
     </footer>
+
+    <canvas></canvas>
+    <div id="loading"></div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.6.10/jquery.dotdotdot.js"></script>
+    {% assets filters="yui_js", output="js/script.min.js", "js/jquery.mCustomScrollbar.custom.min.js", "js/script.js" %}
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+    {% endassets %}
 {% endblock %}
 
