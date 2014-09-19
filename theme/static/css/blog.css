@@ -578,6 +578,13 @@ article > a, .tags, .tags * {
         z-index: 3;
     }
 
+    header.small ul {
+        margin: 60px 0 0 180px;
+    }
+
+    header.small ul li { display: none; }
+    header.small ul li:first-child { display: block; border-bottom: none; }
+
     section#large {
         padding-left: 0;
         margin-left: 180px;
