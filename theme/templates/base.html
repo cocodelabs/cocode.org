@@ -8,10 +8,12 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon.ico" type="image/x-icon" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    {% block css %}
       {% assets filters="cssmin", output="css/blog.min.css", "css/blog.css", "css/pygment.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" type="text/css">
       {% endassets %}
-        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    {% endblock %}
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <!--[if lt IE 9]>  
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
         <![endif]-->

@@ -8,3 +8,28 @@ mixpanel.track('View Blog Tag Detail', {
 
 {% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
 
+{% block content %}
+<h2 class="tagheader">Showing articles for tag: {{ tag }}</h2>
+
+  {% for article in articles_page.object_list %}
+  <div class="timeline-bullet icon-{{ article.category }}"></div>
+    <article>
+        <div class="timeline"></div>
+        <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+
+        {% include 'article_meta.html' %}
+
+        {{ article.summary }}
+
+        <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
+
+        {% if article.tags %}
+          <ul class="tags">
+            {% for tag in article.tags %}
+              <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+    </article>
+  {% endfor %}
+{% endblock %}
