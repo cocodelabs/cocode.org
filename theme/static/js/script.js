@@ -96,6 +96,7 @@ function analyseScroll(e, delta){
         if (avg < 20 && lastScrollY > 50 && lastScrollY < ($(document).height()-50)) {
             console.log('trackpad detected, compensating..')
             $("body").mCustomScrollbar("destroy");
+            window.scrollTo(0, lastScrollY);
         }
         scroll_raw = [];
     }
@@ -104,7 +105,9 @@ function analyseScroll(e, delta){
 }
 
 $(document).bind('mousewheel',function(e, delta){
-    analyseScroll(e, delta);
+    if(!$("body").hasClass("mCustomScrollbar")) {
+        analyseScroll(e, delta);
+    }
 });
 
 $(document).bind('scroll', function(){
