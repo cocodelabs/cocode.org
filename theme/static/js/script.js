@@ -105,7 +105,9 @@ function analyseScroll(e, delta){
 
 $(document).bind('mousewheel',function(e, delta){
     analyseScroll(e, delta);
+});
 
+$(document).bind('scroll', function(){
     if(!$("body").hasClass("mCustomScrollbar")) {
         lastScrollY = window.scrollY;
     }
