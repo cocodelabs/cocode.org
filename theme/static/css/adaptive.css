@@ -303,7 +303,7 @@
     }
 
     section#who span {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     section#who h3:nth-of-type(1)::before {

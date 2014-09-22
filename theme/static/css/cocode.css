@@ -534,12 +534,13 @@ section#who > div {
 
 section#who h2 {
     font-weight: 300;
-    font-size: 30px;
+    font-size: 36px;
     padding: 0;
     margin: 0;
 }
 
 section#who span {
+    font-size: 18px;
     width: 100%;
     display: block;
 }
