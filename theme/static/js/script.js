@@ -93,7 +93,7 @@ function analyseScroll(e, delta){
         var sum = scroll_raw.reduce(function(a, b) { return a + b; });
         var avg = sum / scroll_raw.length;
 
-        if (avg < 20 && lastScrollY > 50 && lastScrollY < ($(document).height()-50)) {
+        if (avg < 20 && lastScrollY > 50 && lastScrollY < ($(document).height()-50) && !$("body").hasClass("mCS_destroyed")) {
             console.log('trackpad detected, compensating..')
             $("body").mCustomScrollbar("destroy");
             window.scrollTo(0, lastScrollY);
