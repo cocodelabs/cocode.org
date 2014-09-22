@@ -148,7 +148,7 @@ function onResize() {
         });
 
         //adapt text-size for mobile
-        offset = 300;
+        offset = 400;
         ratio = ($('body').width()/650);
         ratio = 1 + (1-(ratio + (1/ratio))/1.76);
         $('header blockquote').css({
@@ -159,6 +159,10 @@ function onResize() {
 
         //adapt header height for mobile
         ratio2 = 1 + (1-(ratio + (1/ratio))/1.76);
+
+        $('canvas').width($(window).width()+50);
+        $('canvas').height($(window).height()+50);
+        $('canvas').css({'top': -50});
         $('section#how').css({'margin-top': ((ratio2*420))+"px"});
 
         //adapt doodles for mobile
@@ -190,6 +194,9 @@ function onResize() {
         ratio2 = 1;
 
         $('section#how').css({'margin-top': "400px"});
+        $('canvas').width($(window).width());
+        $('canvas').height($(window).height());
+        $('canvas').css({'top': 0});
 
         $('header blockquote').css({
             'font-size': "30px",
