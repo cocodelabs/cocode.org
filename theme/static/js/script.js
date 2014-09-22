@@ -159,7 +159,6 @@ function onResize() {
 
         //adapt header height for mobile
         ratio2 = 1 + (1-(ratio + (1/ratio))/1.76);
-        $('canvas').css({'height': ((ratio2*$(window).height())+20)+"px"});
         $('section#how').css({'margin-top': ((ratio2*420))+"px"});
 
         //adapt doodles for mobile
@@ -190,7 +189,6 @@ function onResize() {
         offset = 200;
         ratio2 = 1;
 
-        $('canvas').css({'height': $(window).height()});
         $('section#how').css({'margin-top': "400px"});
 
         $('header blockquote').css({
@@ -217,8 +215,8 @@ function onResize() {
     }
 
     //resize canvas for correct drawing
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
     
     //make sure parallax images are drawn
     lastScrollY = lastScrollY-1;
