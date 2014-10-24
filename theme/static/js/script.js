@@ -94,7 +94,8 @@ function analyseScroll(e, delta){
         var avg = sum / scroll_raw.length;
 
         if (avg < 20 && lastScrollY > 50 && lastScrollY < ($(document).height()-50) && !$("body").hasClass("mCS_destroyed")) {
-            console.log('trackpad detected, compensating..')
+            console.log('trackpad detected, compensating..');
+            mixpanel.track('Trackpad compensation');
             $("body").mCustomScrollbar("destroy");
             window.scrollTo(0, lastScrollY);
         }
