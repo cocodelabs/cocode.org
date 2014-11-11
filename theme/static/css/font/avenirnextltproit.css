@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AvenirItalic';
+    src: url('avenirnextltproit.eot');
+    src: url('avenirnextltproit.eot') format('embedded-opentype'),
+         url('avenirnextltproit.woff') format('woff'),
+         url('avenirnextltproit.ttf') format('truetype'),
+         url('avenirnextltproit.svg#AvenirNextLTProItalic') format('svg');
+}

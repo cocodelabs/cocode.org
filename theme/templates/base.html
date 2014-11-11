@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="{{ SITEURL }}/theme/images/favicon.ico" type="image/x-icon" />
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='{{ SITEURL }}/theme/css/font/fonts.css' rel='stylesheet' type='text/css'>
     {% block css %}
       {% assets filters="cssmin", output="css/blog.min.css", "css/blog.css", "css/pygment.css" %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" type="text/css">
