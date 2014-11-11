@@ -81,7 +81,7 @@ canvas {
     background-image: url(../images/background_middle.jpg),
                       url(../images/background_repeatable.jpg);
     background-position: top center, top center;
-    background-repeat: no-repeat, repeat-x;
+    background-repeat: no-repeat, repeat;
 
 }
 
