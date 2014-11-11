@@ -563,7 +563,7 @@ section#who h3:nth-of-type(2)::after {
     content: "";
     display: block;
     background-position: -213px -309px;
-    width: 213px;
+    width: 203px;
     height: 298px;
     position: absolute;
     margin: -100px 0 0 100px;

@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 1090px) {
     section > *, footer > * {
-        width: 860px;
+        width: 850px;
     }
 
     section#how {
