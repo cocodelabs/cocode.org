@@ -163,7 +163,7 @@ function onResize() {
         //adapt header height for mobile
         ratio2 = 1 + (1-(ratio + (1/ratio))/1.76);
 
-        $('canvas').width($(window).width()+50);
+        $('canvas').width(($(window).width()*2)+50);
         $('canvas').height($(window).height()+50);
         $('canvas').css({'top': -50});
         $('section#how').css({'margin-top': ((ratio2*420))+"px"});
@@ -197,7 +197,7 @@ function onResize() {
         ratio2 = 1;
 
         $('section#how').css({'margin-top': "400px"});
-        $('canvas').width($(window).width());
+        $('canvas').width($(window).width()*2);
         $('canvas').height($(window).height());
         $('canvas').css({'top': 0});
 
@@ -225,7 +225,7 @@ function onResize() {
     }
 
     //resize canvas for correct drawing
-    canvas.width = $(window).width();
+    canvas.width = $(window).width()*2;
     canvas.height = $(window).height();
     
     //make sure parallax images are drawn
@@ -250,11 +250,11 @@ function parallax() {
 
     if(relativeY !== prevRelativeY){
         //Header
-        for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width; w += repeat.width-1) {
+        for (var w = (canvas.width/2)-(repeat.width*1.5); w < canvas.width; w += repeat.width-1) {
             context.drawImage(repeat, w, pos(0, power, relativeY, 0));
         }
 
-        context.drawImage(middle, ((canvas.width/2)-offset-1), pos(0, power, 
+        context.drawImage(middle, ((canvas.width/2)-(repeat.width/2)), pos(0, power, 
             relativeY, 0));
 
         //First hr

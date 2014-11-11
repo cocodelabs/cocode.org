@@ -75,10 +75,14 @@ section > *, footer > * {
 canvas {
     position: fixed;
     top: 0;
-    width: 100%;
-    left: 0;
+    right: -73%;
     z-index: -1;
-    background: #312a29;
+    background-color: #312a29;
+    background-image: url(../images/background_middle.jpg),
+                      url(../images/background_repeatable.jpg);
+    background-position: top center, top center;
+    background-repeat: no-repeat, repeat-x;
+
 }
 
 /* Header */
