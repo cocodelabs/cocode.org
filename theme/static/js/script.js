@@ -258,21 +258,21 @@ function parallax() {
             relativeY, 0));
 
         //First hr
-        for (var w = ((canvas.width/2)-200)-repeat.width; w < canvas.width; w += repeat.width-1) {
+        for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width; w += repeat.width-1) {
             context.drawImage(repeat, w, pos(480, power_hr, relativeY, 0));
         }
 
         //team block
-        if(lastScrollY > 512){
-            for (var w = ((canvas.width/2)-200)-repeat.width; w < canvas.width*2; w += (repeat.width*2)) {
-                context.drawImage(repeat, w, pos(500, power, relativeY, 0), 1956, 900);
+        if(lastScrollY > $('#who').position().top - $(window).height()){
+            for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width*2; w += (repeat.width*2)) {
+                context.drawImage(repeat, w, pos(600, power-200, relativeY, 0), 1956, 900);
             }
         }
 
         //Second hr
-        if(lastScrollY > 1450){
-            for (var w = ((canvas.width/2)-200)-repeat.width; w < canvas.width; w += repeat.width-1) {
-                context.drawImage(repeat, w, pos(1050, power, relativeY, 0));
+        if(lastScrollY > ($('#quotes').position().top-50) - $(window).height()){
+            for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width; w += repeat.width-1) {
+                context.drawImage(repeat, w, pos(1600, power_hr, relativeY, 0));
             }
         }
 
