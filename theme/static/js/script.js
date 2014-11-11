@@ -1,7 +1,9 @@
 /// GENERAL ////////////////////////////////////////////////////////////////////
 
 //Show loader for canvas.
-$('#loading').addClass('animate');
+$(document).ready(function(){
+    $('#loading').addClass('animate');
+});
 
 //Menu link: Apps
 $('header > nav li:nth-of-type(1)').click(function(){
