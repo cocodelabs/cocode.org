@@ -298,7 +298,10 @@ function limit(min, max, value) {
     return Math.max(min, Math.min(max, value));
 }
 
-window.addEventListener('load', onResize, false);
+//fix for breaking safari shit
+$(window).load(function(){
+    setTimeout(onResize, 100);
+});
 window.addEventListener('resize', onResize, false);
 
 
