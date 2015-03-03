@@ -35,7 +35,7 @@ PAGE_SAVE_AS = '{slug}/index.html'
 BLOG_URL = 'blog/'
 BLOG_INDEX_SAVE_AS = 'blog/index.html'
 
-ARTICLE_DIR = 'blog'
+ARTICLE_PATHS = ('blog',)
 ARTICLE_URL = 'blog/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{slug}/index.html'
 
@@ -63,8 +63,11 @@ DISQUS_SITENAME = 'cocodeorg'
 
 # Plugins
 
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ('plugins',)
 PLUGINS = ('author', 'summary', 'assets', 'gzip_cache')
+
+# Assets (plugin)
+ASSET_SOURCE_PATHS = ('static',)
 
 SUMMARY_END_MARKER = '---'
 
