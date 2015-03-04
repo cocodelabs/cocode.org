@@ -52,6 +52,8 @@ AUTHOR_SAVE_AS = 'blog/authors/{slug}/index.html'
 
 ARCHIVES_SAVE_AS = 'blog/archvives/index.html'
 
+STATIC_PATHS = ('images',)
+
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
