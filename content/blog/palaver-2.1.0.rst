@@ -5,7 +5,6 @@ Palaver 2.1.0
 :category: apps
 :tags: iOS, Palaver
 :author: kyle
-:status: draft
 
 I'm excited to release a new version of Palaver, 2.1.0. This update includes a brand new dark mode for Palaver. The application can detect when the screen brightness is down and automatically switch between light and dark mode.
 
