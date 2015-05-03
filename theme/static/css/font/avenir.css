@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AvenirBlack';
+    src: url('avenir_black.eot');
+    src: url('avenir_black.eot') format('embedded-opentype'),
+         url('avenir_black.woff') format('woff'),
+         url('avenir_black.ttf') format('truetype'),
+         url('avenir_black.svg#AvenirBlack') format('svg');
+}

@@ -1,13 +1,164 @@
 {% extends "base.html" %}
 
 {% block mixpanel_event %}
-mixpanel.track('View Landing Page');
+mixpanel.track('Homepage');
 {% endblock %}
 
-{% block body_id %}homepage{% endblock %}
+{% block css %}
+  {% assets filters="cssmin", output="css/cocode.min.css", "css/cocode.css", "css/adaptive.css", "css/jquery.mCustomScrollbar.css" %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}" type="text/css">
+  {% endassets %}
+{% endblock %}
 
 {% block body %}
-<h1><a href="{{ SITEURL }}/">Cocode</a></h1>
-<p>coming soon <em>(meanwhile, check out our <a href="{{ SITEURL }}/{{ BLOG_URL }}" alt="Cocode Blog">blog</a>)</em></p>
+    <section id="why">
+        <header>
+            <a href="{{ SITEURL }}/">
+                <h1>Cocode</h1>
+            </a>
+
+            <ul>
+                <li><a href="{{ SITEURL }}/">website <i>/web&#183;s&#299;t/</i></a></li>
+                <li><a href="http://palaverapp.com/">palaver <i>/p&#601;&#183;lav&#183;&#601;r/</i></a></li>
+                <li><a href="{{ SITEURL }}/{{ BLOG_URL }}">blog <i>/bl&#244;g/</i></a></li>
+            </ul>
+
+            <nav>
+                <li><a href="#what">Apps</a></li>
+                <li><a href="#who">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </nav>
+
+            <blockquote>
+                &ldquo; We <mark>believe</mark>...<br/>
+                that <mark><div class="doodle"></div>advanced technologies</mark> should<br />
+                be available to <mark><div class="doodle"></div>everyone</mark>. &rdquo;
+            </blockquote>
+        </header>
+    </section>
+
+    <section id="how">
+        <ul>
+            <li>
+                <h3>Open source</h3>
+                <p>We like to share! We've contributed to a variety of projects as well as released parts of our own code to the public.</p>
+            </li>
+
+            <li>
+                <h3>User focus</h3>
+                <p>Our apps are built from the ground up with eye for design to make the experience as fluent as possible.</p>
+            </li>
+
+            <li>
+                <h3>Privacy</h3>
+                <p>We care deeply about privacy. Keeping your own personal information secure is one of our biggest concerns.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="what">
+        <div>
+            <button>Up</button>
+
+            <div id="message">We're still working on these. Check our <a href="{{ SITEURL }}/{{ BLOG_URL }}" target="_blank">blog</a> for the latest updates.</div>
+            <ul>
+                <li class="current"><a href="javascript:void(0);">Palaver</a></li>
+                <li><a href="javascript:void(0);">...</a></li>
+                <li><a href="javascript:void(0);">...</a></li>
+            </ul>
+
+            <h2>I am <mark>Palaver</mark>,<br/>pleased to meet you.</h2>
+            <p>
+                Palaver is the client that opens up IRC for the every day user. Check it out!<br />
+                <a href="http://palaverapp.com/">Read more</a>
+            </p>
+
+            <aside id="ipad"></aside>
+            <aside id="iphone"></aside>
+        </div>
+    </section>
+
+    <section id="who">
+        <div>
+            <h2><mark>Meet</mark> the <mark>team</mark></h2>
+            <span>Did you know that Cocode only contains two people?</span><br />
+
+            <h3>Dennis Collaris</h3>
+            <p>Hey there! I am Cocode's UI/UX designer from Brainport, The Netherlands.<br />I am responsible for pretty much all graphical goodness in our apps.</p>
+
+            <ul>
+                <li class="twitter"><a target="_blank" href="https://twitter.com/imDecode">Twitter</a></li>
+                <li class="dribbble"><a target="_blank" href="http://dribbble.com/iamDecode">Dribbble</a></li>
+                <li class="email"><a target="_blank" href="mailto:dennis@cocode.org">Email</a></li>
+            </ul>
+
+            <h3>Kyle Fuller</h3>
+            <p>I craft beautiful applications and developer tools. Mostly focussing on iPhone and iPad. Active in many open source communities.</p>
+
+            <ul>
+                <li class="twitter"><a target="_blank" href="https://twitter.com/kylefuller">Twitter</a></li>
+                <li class="github"><a target="_blank" href="https://github.com/kylef">Github</a></li>
+                <li class="email"><a target="_blank" href="mailto:kylef@cocode.org">Email</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div>
+            <h2><mark>Blog</mark> posts</h2>
+            <a class="blog" href="{{ SITEURL }}/{{ BLOG_URL }}" target="_blank">Visit blog &rarr;</a>
+
+            <ul>
+              {% for article in articles %}
+                <li>
+                    <article>
+                        <h3>{{ article.title }}</h3>
+                        {{ article.summary }}
+
+                        <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
+                    </article>
+                </li>
+              {% endfor %}
+            </div>
+    </section>
+
+    <section id="quotes">
+        <div>
+            <article>
+                <h2>What <mark>users</mark> think</h2>
+                <blockquote>&ldquo; Best iOS IRC client - This far surpasses anything else I've use in iOS. It's easy to use, has a nice UI, and has lots of nice features. &rdquo; <span>- Pooh Bear</span></blockquote>
+            </article>
+
+            <article id="contact">
+                <h2>Get in <mark>touch</mark></h2>
+                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Email" />
+                <textarea placeholder="What's up?"></textarea>
+                <input type="submit" value="Send" />
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <span>&copy <b>Cocode</b> LTD.</span>
+
+            <ul>
+                <li class="twitter"><a target="_blank" href="https://twitter.com/cocodeorg">Twitter</a></li>
+                <li class="dribbble"><a target="_blank" href="http://dribbble.com/iamDecode">Dribbble</a></li>
+                <li class="github"><a target="_blank" href="https://github.com/cocodelabs">Github</a></li>
+                <li class="email"><a target="_blank" href="mailto:kyle@cocode.org">Email</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <canvas></canvas>
+    <div id="loading"></div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.6.10/jquery.dotdotdot.js"></script>
+    {% assets filters="jsmin", output="js/script.min.js", "js/jquery.mCustomScrollbar.custom.min.js", "js/script.js" %}
+        <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
+    {% endassets %}
 {% endblock %}
 
