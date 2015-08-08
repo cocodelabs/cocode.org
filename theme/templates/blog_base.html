@@ -23,7 +23,7 @@
 
 {% block footer %}
     {{ super() }}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
         function f(){
             var a=($("header").width()/930)*476;var b=$(window).height()-a-(($("header").width()/370)*435);$("header").css("background-position","bottom , 0 "+b+"px");
@@ -37,7 +37,7 @@
         (function () {
             var s = document.createElement('script'); s.async = true;
             s.type = 'text/javascript';
-            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
       {% endif %}
