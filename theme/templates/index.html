@@ -131,10 +131,12 @@ mixpanel.track('Homepage');
 
             <article id="contact">
                 <h2>Get in <mark>touch</mark></h2>
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <textarea placeholder="What's up?"></textarea>
-                <input type="submit" value="Send" />
+                <form action="https://formspree.io/support@cocode.org" method="POST">
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="text" name="email" placeholder="Email" />
+                    <textarea name="message" placeholder="What's up?"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
             </article>
         </div>
     </section>
