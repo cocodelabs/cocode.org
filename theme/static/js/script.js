@@ -61,19 +61,21 @@ $('header > nav li:nth-of-type(3)').click(function(){
 var lastScrollY = 0;
 
 //Enable initial smooth scroll
-if (navigator.userAgent.indexOf('Mac OS X') != -1) {
-    $("body").mCustomScrollbar({
-        theme:"minimal",
-        mouseWheel:{ 
-            deltaFactor: 3
-        },
-        callbacks:{
-            whileScrolling:function(){ 
-                lastScrollY = -this.mcs.top;
+$(window).load(function(){
+    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+        $("body").mCustomScrollbar({
+            theme:"minimal",
+            mouseWheel:{ 
+                deltaFactor: 3
+            },
+            callbacks:{
+                whileScrolling:function(){ 
+                    lastScrollY = -this.mcs.top;
+                }
             }
-        }
-    });
-}
+        });
+    }
+});
 
 //analyse scroll to determine high-res scrolling (trackpad/magic mouse)
 //then disable smooth scroll based on that.
