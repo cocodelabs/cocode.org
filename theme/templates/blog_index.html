@@ -53,7 +53,7 @@ mixpanel.track('View Blog Article List');
             $('.timeline').last().height($(document).height() - $('.timeline').last().offset().top);
         }
         $(window).resize(f);
-        f();
+        $(window).load(f);
     </script>
 {% endblock %}
 

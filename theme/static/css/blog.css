@@ -48,11 +48,6 @@ h2 {
     line-height:1.3em;
 }
 
-#blog_index article img {
-    display: block; 
-    margin-bottom: 23px; 
-}
-
 header h1 a {
     display: block;
     text-indent: -9999px;
