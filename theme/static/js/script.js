@@ -252,7 +252,7 @@ function parallax() {
 
     if(relativeY !== prevRelativeY){
         //Header
-        for (var w = (canvas.width/2)-(repeat.width*1.5); w < canvas.width; w += repeat.width-1) {
+        for (var w = (canvas.width/2)-(repeat.width*2.5); w < canvas.width; w += repeat.width-1) {
             context.drawImage(repeat, w, pos(0, power, relativeY, 0));
         }
 
@@ -260,20 +260,20 @@ function parallax() {
             relativeY, 0));
 
         //First hr
-        for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width; w += repeat.width-1) {
+        for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width; w += repeat.width-1) {
             context.drawImage(repeat, w, pos(480, power_hr, relativeY, 0));
         }
 
         //team block
         if(lastScrollY > $('#who').position().top - $(window).height()){
-            for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width*2; w += (repeat.width*2)) {
+            for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width*2; w += (repeat.width*2)) {
                 context.drawImage(repeat, w, pos(600, power-200, relativeY, 0), 1956, 900);
             }
         }
 
         //Second hr
         if(lastScrollY > ($('#quotes').position().top-50) - $(window).height()){
-            for (var w = ((canvas.width/2)-offset)-repeat.width; w < canvas.width; w += repeat.width-1) {
+            for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width; w += repeat.width-1) {
                 context.drawImage(repeat, w, pos(1600, power_hr, relativeY, 0));
             }
         }
