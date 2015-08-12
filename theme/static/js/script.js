@@ -123,19 +123,6 @@ $(document).bind('scroll', function(){
 
 
 /// PARALLAX EFFECT ////////////////////////////////////////////////////////////
-
-// Unify requestAnimationFrame stuff
-window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame       ||
-          window.webkitRequestAnimationFrame ||
-          window.mozRequestAnimationFrame    ||
-          window.oRequestAnimationFrame      ||
-          window.msRequestAnimationFrame     ||
-          function( callback ){
-            window.setTimeout(callback, 1000 / 60);
-          };
-})();
-
 var ratio2 = 1;
 
 //load header images
@@ -246,42 +233,49 @@ $(canvas).attr("height", $(window).height());
 var context = canvas.getContext("2d");
 
 var prevRelativeY = -1;
+var loopId;
 function parallax() {
-    requestAnimationFrame(parallax);
-    var relativeY = lastScrollY / 3000;
+    loopId = requestAnimationFrame(parallax);
 
-    if(relativeY !== prevRelativeY){
-        //Header
-        for (var w = (canvas.width/2)-(repeat.width*2.5); w < canvas.width; w += repeat.width-1) {
-            context.drawImage(repeat, w, pos(0, power, relativeY, 0));
-        }
+    try {
+        var relativeY = lastScrollY / 3000;
 
-        context.drawImage(middle, ((canvas.width/2)-(repeat.width/2)), pos(0, power, 
-            relativeY, 0));
-
-        //First hr
-        for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width; w += repeat.width-1) {
-            context.drawImage(repeat, w, pos(480, power_hr, relativeY, 0));
-        }
-
-        //team block
-        if(lastScrollY > $('#who').position().top - $(window).height()){
-            for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width*2; w += (repeat.width*2)) {
-                context.drawImage(repeat, w, pos(600, power-200, relativeY, 0), 1956, 900);
+        if(relativeY !== prevRelativeY){
+            //Header
+            for (var w = (canvas.width/2)-(repeat.width*2.5); w < canvas.width; w += repeat.width-1) {
+                context.drawImage(repeat, w, pos(0, power, relativeY, 0));
             }
-        }
 
-        //Second hr
-        if(lastScrollY > ($('#quotes').position().top-50) - $(window).height()){
+            context.drawImage(middle, ((canvas.width/2)-(repeat.width/2)), pos(0, power, 
+                relativeY, 0));
+
+            //First hr
             for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width; w += repeat.width-1) {
-                context.drawImage(repeat, w, pos(1600, power_hr, relativeY, 0));
+                context.drawImage(repeat, w, pos(480, power_hr, relativeY, 0));
             }
+
+            //team block
+            if(lastScrollY > $('#who').position().top - $(window).height()){
+                for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width*2; w += (repeat.width*2)) {
+                    context.drawImage(repeat, w, pos(600, power-200, relativeY, 0), 1956, 900);
+                }
+            }
+
+            //Second hr
+            if(lastScrollY > ($('#quotes').position().top-50) - $(window).height()){
+                for (var w = ((canvas.width/2)-offset)-(repeat.width*2); w < canvas.width; w += repeat.width-1) {
+                    context.drawImage(repeat, w, pos(1600, power_hr, relativeY, 0));
+                }
+            }
+
+            prevRelativeY = relativeY;
+
+            //Fade out loader when image is loaded.
+            if (!$('#loading').hasClass('fade')) $('#loading').addClass('fade');
         }
-
-        prevRelativeY = relativeY;
-
-        //Fade out loader when image is loaded.
-        if (!$('#loading').hasClass('fade')) $('#loading').addClass('fade');
+    }catch(e){
+        cancelAnimationFrame(loopId);
+        throw e;
     }
 }
 
