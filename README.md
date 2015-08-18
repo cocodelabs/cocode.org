@@ -1,5 +1,5 @@
-[cocode.org](http://cocode.org/)
-================================
+[cocode.org](https://cocode.org/)
+=================================
 
 The Cocode website is powered by [Pelican](http://getpelican.com/), the Python
 static site generator.

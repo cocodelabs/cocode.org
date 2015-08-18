@@ -7,7 +7,7 @@ from os import environ
 
 AUTHOR = 'Kyle Fuller'
 SITENAME = 'Cocode'
-SITEURL = environ.get('PELICAN_SITEURL', 'http://cocode.org')
+SITEURL = environ.get('PELICAN_SITEURL', 'https://cocode.org')
 
 TIMEZONE = 'Europe/London'
 
@@ -79,7 +79,7 @@ AUTHORS = {
     'kyle': {
         'name': 'Kyle Fuller',
         'title': 'Managing Director',
-        'website': 'http://kylefuller.co.uk/',
+        'website': 'https://fuller.li/',
         'email': 'kyle@cocode.org',
         'avatar': 'https://www.gravatar.com/avatar/d200a17dd269fd4001bacb11662dab4b.png?s=100'
     }

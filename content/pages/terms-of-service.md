@@ -19,7 +19,7 @@ of new tools and resources, shall be subject to the Terms of Service.
 Continued use of the Service after any such changes shall constitute your
 consent to such changes. You can review the most current version of the Terms
 of Service at any time at:
-[http://cocode.org/terms-of-service/](http://cocode.org/terms-of-service/).
+[https://cocode.org/terms-of-service/](https://cocode.org/terms-of-service/).
 
 Violation of any of the terms below will result in the termination of your
 Account. While Cocode prohibits such conduct and Content on the Service, you
