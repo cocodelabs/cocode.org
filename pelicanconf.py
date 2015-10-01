@@ -82,7 +82,14 @@ AUTHORS = {
         'website': 'https://fuller.li/',
         'email': 'kyle@cocode.org',
         'avatar': 'https://www.gravatar.com/avatar/d200a17dd269fd4001bacb11662dab4b.png?s=100'
-    }
+    },
+    'dennis': {
+    	'name': 'Dennis Collaris',
+        'title': 'UI/UX developer',
+        'website': 'http://decode.design',
+        'email': 'dennis@cocode.org',
+        'avatar': 'http://s.gravatar.com/avatar/f0bd7d7d3ab88a6eb7fcaa44e8ee316b?s=100'
+     }
 }
 
 # Analytics
