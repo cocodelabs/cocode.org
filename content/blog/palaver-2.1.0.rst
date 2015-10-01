@@ -8,7 +8,7 @@ Palaver 2.1.0
 
 I'm excited to release a new version of Palaver, 2.1.0. This update includes a brand new dark mode for Palaver. The application can detect when the screen brightness is down and automatically switch between light and dark mode.
 
-.. image:: {attach}/images/palaver-210.png
+.. image:: {attach}/images/palaver-210.jpg
     :alt: Palaver 2.1.0 Light and Dark mode
     :width: 750
     :height: 1334

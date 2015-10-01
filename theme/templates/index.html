@@ -113,7 +113,7 @@ mixpanel.track('Homepage');
                 <li>
                     <article>
                         <h3>{{ article.title }}</h3>
-                        {{ article.summary }}
+                        {{ article.summary|striptags }}
 
                         <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
                     </article>
@@ -159,7 +159,8 @@ mixpanel.track('Homepage');
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.6.10/jquery.dotdotdot.js"></script>
-    {% assets filters="jsmin", output="js/script.min.js", "js/jquery.mCustomScrollbar.custom.min.js", "js/script.js" %}
+    <script src="theme/js/jquery.mCustomScrollbar.custom.min.js"></script>
+    {% assets filters="jsmin", output="js/script.min.js", "js/script.js" %}
         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
     {% endassets %}
 {% endblock %}

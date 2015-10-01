@@ -78,10 +78,10 @@ canvas {
     right: -73%;
     z-index: -1;
     background-color: #312a29;
-    background-image: url(../images/background_middle.jpg),
+    /*background-image: url(../images/background_middle.jpg),
                       url(../images/background_repeatable.jpg);
     background-position: top center, top center;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat, repeat;*/
 
 }
 
@@ -460,7 +460,7 @@ section#what #ipad::after {
 }
 
 section#what #iphone {
-    background: url(../images/splash.png);
+    background: url(../images/splash.jpg);
     background-size: 100% 100%;
     display: block;
     position: relative;
