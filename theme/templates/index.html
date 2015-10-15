@@ -110,6 +110,7 @@ mixpanel.track('Homepage');
 
             <ul>
               {% for article in articles %}
+                {% if loop.index <= 3 %}
                 <li>
                     <article>
                         <h3>{{ article.title }}</h3>
@@ -118,6 +119,7 @@ mixpanel.track('Homepage');
                         <a href="{{ SITEURL }}/{{ article.url }}">Read more &rarr;</a>
                     </article>
                 </li>
+                {% endif %}
               {% endfor %}
             </div>
     </section>
