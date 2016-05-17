@@ -35,6 +35,10 @@ mixpanel.track('View Blog Article', {
         {{ article.content }}
 
         {% if article.tags %}
+          {% if "Palaver" in article.tags and "iOS" in article.tags %}
+            <a class="appstore" target="_blank" href="https://itunes.apple.com/us/app/palaver/id538073623?ls=1&mt=8" title="Download Palaver from the App Store">Download from the App Store</a>
+          {% endif %}
+
           <ul class="tags">
             {% for tag in article.tags %}
               <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
