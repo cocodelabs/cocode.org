@@ -56,6 +56,8 @@ mixpanel.track('Homepage');
         </ul>
     </section>
 
+    <div class="separator"></div>
+
     <section id="what">
         <div>
             <button>Up</button>
@@ -124,6 +126,8 @@ mixpanel.track('Homepage');
             </div>
     </section>
 
+    <div class="separator"></div>
+
     <section id="quotes">
         <div>
             <article>
@@ -156,12 +160,8 @@ mixpanel.track('Homepage');
         </div>
     </footer>
 
-    <canvas></canvas>
-    <div id="loading"></div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/1.6.10/jquery.dotdotdot.js"></script>
-    <script src="theme/js/jquery.mCustomScrollbar.custom.min.js"></script>
     {% assets filters="jsmin", output="js/script.min.js", "js/script.js" %}
         <script src="{{ SITEURL }}/{{ ASSET_URL }}"></script>
     {% endassets %}

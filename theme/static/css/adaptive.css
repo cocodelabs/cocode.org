@@ -39,7 +39,7 @@
         position: absolute;
     }
 
-    section#who {
+    section#who div {
         margin: 50px 0 50px 0;
     }
 
@@ -108,6 +108,10 @@
 
     section#what #iphone {
         display: none;
+    }
+
+    section#who::before {
+        background-size: auto 150%;
     }
 
     section#who h3:nth-of-type(1)::before {
@@ -273,8 +277,13 @@
         display: none;
     }
 
-    section#who {
-        margin: 210px 0 20px 0;
+    section#who::before {
+        background-size: auto 135%;
+        height: 200%;
+    }
+
+    section#who div {
+        margin: 220px 0 20px 0;
         width: 100%;
         float: left;
         color: #fff;
